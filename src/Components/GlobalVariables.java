@@ -2,10 +2,10 @@ package Components;
 import java.util.*;
 
 public class GlobalVariables {
-     static int currentLine = 0;
-     static int currentCharInLine = 0;
-     static HashMap<Integer, List<String>> wordsMap = new HashMap<>();
-     static final HashMap<String, HashSet<String>> map = new HashMap() {
+    static int currentLine = 0;
+    static int currentCharInLine = 0;
+    static HashMap<Integer, List<String>> wordsMap = new HashMap<>();
+    static final HashMap<String, HashSet<String>> map = new HashMap() {
         {
             put("keyword", new HashSet<String>() {{
                 add("program");

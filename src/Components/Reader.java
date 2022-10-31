@@ -16,11 +16,10 @@ public class Reader {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
             String checker;
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();;
             //Reads by line
             while ((checker = br.readLine()) != null) {
                 currentLine++;
-                sb = new StringBuilder();
                 for (int i = 0; i < checker.length(); i++) {
                     currentCharInLine++;
                     char c = checker.charAt(i);

@@ -1,8 +1,12 @@
 package Components;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static Components.HelperFunctions.*;
 import static Components.GlobalVariables.*;
 import static Components.Position.position;
+import static Components.Printer.printer;
 
 public class ThreeMainFunctions {
     //Get kind of lexeme
@@ -37,9 +41,10 @@ public class ThreeMainFunctions {
     }
 
     //Gets next lexeme
-    public static void next(char[] charArray, int currentLine) {
+    public static void next(char[] charHolder, int currentLine) {
         StringBuilder newWord = new StringBuilder();
         List<String> wordList = wordsMap.getOrDefault(currentLine, new ArrayList<>());
+        boolean goBack = false;
         for (int i = 0; i < charHolder.length; i++) {
             char letter = charHolder[i];
 
@@ -53,12 +58,12 @@ public class ThreeMainFunctions {
             }
 
             // Return if we see a comment, ignore the rest
-
             if (shouldAddWord(letter)) {
                 performAddWord(newWord.toString(), wordList);
                 wordList.add(letter + "");
                 newWord = new StringBuilder();
-            } else {
+            }
+            else {
                 newWord.append(letter);
             }
             wordsMap.put(currentLine, wordList);
@@ -67,9 +72,10 @@ public class ThreeMainFunctions {
             performAddWord(newWord.toString(), wordList);
             wordsMap.put(currentLine, wordList);
         }
-        while (!kind().equals("end-of-text")) {
-            System.out.println(position(), kind(), value() );
-            next();
-        }
+//        while (!kind().equals("end-of-text") || goBack) {
+//            System.out.println(position(), kind(), value());
+//            printer();
+//            next();
+//        }
     }
 }
