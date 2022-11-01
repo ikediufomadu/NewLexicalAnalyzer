@@ -13,12 +13,23 @@ public class Next {
     //Gets next lexeme
     public static void next(char[] charHolder) {
         String newWord = "";
-
-            while (!kind().equals("end-of-text")) {
-                printer();
-                next(charHolder);
+        boolean num = false;
+        int j = 0;
+        for (int i = 0; i < charHolder.length; i++){
+            if (i+1 < charHolder.length && (Character.isDigit(charHolder[i]) && Character.isDigit(charHolder[i+1]))) {
+                newWord += charHolder[i];
+                num = true;
             }
-            return;
         }
+        if (num = false) {
+            newWord += charHolder[j];
+        }
+        TokenInfo t = getTokenInfo(newWord);
+        while (!kind(t).equals("end-of-text") || j < charHolder.length) {
+            j++;
+            printer();
+            next(charHolder);
+        }
+        return;
     }
 }
