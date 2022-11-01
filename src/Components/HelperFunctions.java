@@ -1,7 +1,9 @@
 package Components;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
@@ -67,5 +69,41 @@ public class HelperFunctions implements Position {
             }
         }
         return -1;
+    }
+
+    //Check reserved keywords
+    public static TokenInfo getTokenInfo(String input) {
+        for (Map.Entry<String, HashSet<String>> entry : map.entrySet()) {
+            String tokenVal = entry.getKey();
+            HashSet<String> set = entry.getValue();
+
+            //Checks if input is in set
+            if (set.contains(input.toLowerCase())) {
+                return new TokenInfo(tokenVal, input);
+            }
+        }
+
+        // check if integer
+        try {
+            int num = Integer.parseInt(input);
+            return new TokenInfo("integer", input);
+        } catch (Exception e) {
+        }
+
+        // check if identifier (character)
+        if (input.length() == 1 || input.equals("expression")) {
+            if (Character.isLetter(input.charAt(0))) {
+                return new TokenInfo("identifiers", input);
+            }
+        }
+        if (input.equals("end")) {
+            return new TokenInfo("end-of-file", input);
+        }
+
+        if (input.length() > 1) {
+            return new TokenInfo("program_name", input);
+        }
+
+        return null;
     }
 }
