@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
-import static Components.ThreeMainFunctions.*;
+import static Components.Next.next;
 
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
@@ -28,7 +28,7 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                next(sb.toString().toCharArray(), currentLine);
+                next(sb.toString().toCharArray());
                 currentCharInLine = 0;
             }
             br.close();

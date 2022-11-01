@@ -3,8 +3,9 @@ package Components;
 import java.util.List;
 import java.util.Map;
 
+import static Components.GlobalVariables.*;
 import static Components.HelperFunctions.*;
-import static Components.ThreeMainFunctions.*;
+import static Components.TwoMainFunctions.*;
 
 public class Printer {
     public static void printer() {
