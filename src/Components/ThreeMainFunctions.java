@@ -1,8 +1,10 @@
 package Components;
 
+import static Components.GlobalVariables.*;
 import static Components.HelperFunctions.*;
 
-public class TwoMainFunctions {
+public class ThreeMainFunctions {
+    static String munchedString = "";
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         switch (t.currentKeyword) {
@@ -32,5 +34,21 @@ public class TwoMainFunctions {
             return t.currentTokenValue;
         }
         return "";
+    }
+
+    public static String maxMunch(char charToMunch) {
+        reportLexicalError(charToMunch, currentLine, currentCharInLine);
+        if (Character.isLetter(charToMunch)) {
+            munchedString += charToMunch;
+            //CHECK IF NEXT CHAR IS ALSO A LETTER, IF SO CONTINUE TO MUNCH
+            System.out.println(munchedString);
+        }
+        else if (Character.isDigit(charToMunch)) {
+            munchedString += charToMunch;
+            //CHECK IF NEXT CHAR IS ALSO A NUMBER, IF SO CONTINUE TO MUNCH
+            System.out.println(munchedString);
+        }
+
+        return munchedString;
     }
 }

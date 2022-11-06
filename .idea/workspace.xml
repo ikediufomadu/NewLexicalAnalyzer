@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V1.2&#10;-Next function has base case recursion implemented.">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TwoMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="LA_Driver" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Components.Driver" />
       <module name="LexicalAnalyzer" />
       <method v="2">
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667295738030</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped">
+      <created>1667337976107</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667337976107</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +106,18 @@
     <MESSAGE value="V1.0&#10;-Main classes created&#10;-Working on 'Next' function" />
     <MESSAGE value="V1.1&#10;-Printer class created&#10;-Working on 'Next' function" />
     <MESSAGE value="V1.2&#10;-Next function has base case recursion implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.2&#10;-Next function has base case recursion implemented." />
+    <MESSAGE value="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Components/Next.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

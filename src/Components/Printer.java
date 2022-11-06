@@ -5,7 +5,7 @@ import java.util.Map;
 
 import static Components.GlobalVariables.*;
 import static Components.HelperFunctions.*;
-import static Components.TwoMainFunctions.*;
+import static Components.ThreeMainFunctions.*;
 
 public class Printer {
     public static void printer() {
