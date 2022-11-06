@@ -10,7 +10,6 @@ import static Components.GlobalVariables.*;
 import static Components.Next.next;
 
 public class Reader {
-    public static boolean finishedReading = false;
     public static void reader(String filenameToRead) throws IOException {
         File f = new File(filenameToRead);
         if (f.exists() && !f.isDirectory() && f.isFile() && f.canRead()) {
@@ -29,7 +28,6 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                if (br.readLine() == null) {finishedReading = true;}
                 next(sb.toString().toCharArray());
                 currentCharInLine = 0;
             }

@@ -9,7 +9,9 @@ import static Components.ThreeMainFunctions.*;
 
 public class Printer {
     public static void printer() {
-        for (Map.Entry<Integer, List<String>> entry : wordsMap.entrySet()) {
+        System.out.println("Make sure to implement this correctly after you're done with everything else");
+        return;
+        /*for (Map.Entry<Integer, List<String>> entry : wordsMap.entrySet()) {
             int lineNum = entry.getKey();
             int col = 0;
             List<String> wordList = entry.getValue();
@@ -22,6 +24,6 @@ public class Printer {
                     }
                 }
             }
-        }
+        }*/
     }
 }

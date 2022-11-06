@@ -11,11 +11,9 @@ public class Next {
         }
 
         char charToMunch = charHolder[j];
-        //TokenInfo t = new TokenInfo(, "");
-        while (!Reader.finishedReading/*!kind(t).equals("end-of-text")*/) {
-            maxMunch(charToMunch);
+        while (j < charHolder.length-1 /*!kind(t).equals("end-of-text")*/) {
             j++;
-            //printer();
+            maxMunch(charToMunch);
             next(charHolder);
         }
     }

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import static Components.Printer.printer;
 import static Components.Reader.reader;
 
 
@@ -17,5 +18,6 @@ public class Driver{
             System.exit(0);
         }
         reader(fileName);
+        printer();
     }
 }
