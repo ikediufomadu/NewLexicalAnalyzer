@@ -12,12 +12,11 @@ public class Next {
 
         char charToMunch = charHolder[j];
         //TokenInfo t = new TokenInfo(, "");
-        while (Reader.finishedReading == false/*!kind(t).equals("end-of-text")*/) {
+        while (!Reader.finishedReading/*!kind(t).equals("end-of-text")*/) {
             maxMunch(charToMunch);
             j++;
             //printer();
             next(charHolder);
         }
-        return;
     }
 }

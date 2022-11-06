@@ -2,13 +2,12 @@ package Components;
 
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
 
-public class HelperFunctions implements Position {
+public class HelperFunctions {
     //Report syntax errors
     public static void reportLexicalError(char c, int currentLine, int currentCharInLine) {
         if (c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']') {
@@ -36,29 +35,6 @@ public class HelperFunctions implements Position {
 
     public static String position(int currentLine, int currentCharInLine) {
         return (currentLine) + ":" + (currentCharInLine);
-    }
-
-    static boolean shouldAddWord(char letter) {
-        return letter == ' ' || letter == '(' || letter == ')' || letter == '_' || letter == '/';
-    }
-
-    public static void performAddWord(String newWord, List<String> wordList) {
-        String wordToAdd = newWord;
-        if (wordToAdd.equals("print")) {
-            wordList.add(wordToAdd);
-            return;
-        }
-
-        int index = getKeywordStartingIndex(newWord);
-
-        // Split the string int two parts if a keyword is in there
-        if (index != -1) {
-            String firstWord = wordToAdd.substring(0, index);
-            if (!firstWord.equals("")) wordList.add(firstWord);
-            wordToAdd = wordToAdd.substring(index);
-        }
-
-        if (!wordToAdd.equals("")) wordList.add(wordToAdd);
     }
 
     // returns the index of where the word starts

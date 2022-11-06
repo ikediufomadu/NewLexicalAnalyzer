@@ -36,19 +36,19 @@ public class ThreeMainFunctions {
         return "";
     }
 
-    public static String maxMunch(char charToMunch) {
+    public static void maxMunch(char charToMunch) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         if (Character.isLetter(charToMunch)) {
             munchedString += charToMunch;
             //CHECK IF NEXT CHAR IS ALSO A LETTER, IF SO CONTINUE TO MUNCH
+            //ELSE APPEND MUNCHED STRING TO THE WORDS LIST
             System.out.println(munchedString);
         }
         else if (Character.isDigit(charToMunch)) {
             munchedString += charToMunch;
             //CHECK IF NEXT CHAR IS ALSO A NUMBER, IF SO CONTINUE TO MUNCH
+            //ELSE APPEND MUNCHED STRING TO THE WORDS LIST
             System.out.println(munchedString);
         }
-
-        return munchedString;
     }
 }

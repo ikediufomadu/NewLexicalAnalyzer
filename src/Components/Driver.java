@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import static Components.Reader.reader;
 
 
-public class Driver implements Position{
+public class Driver{
     public static void main(String[] args) throws IOException {
         BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Please enter a file to analyze or type \"quit\" to exit the program\nEG: \"hello.txt\" ");

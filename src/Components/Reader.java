@@ -7,7 +7,6 @@ import java.io.IOException;
 
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
-import static Components.HelperFunctions.reportLexicalError;
 import static Components.Next.next;
 
 public class Reader {
@@ -28,7 +27,6 @@ public class Reader {
 
                     //Skips code with comments
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
-                    //reportLexicalError(c, currentLine, currentCharInLine);
                     sb.append(c);
                 }
                 if (br.readLine() == null) {finishedReading = true;}
