@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667776391624</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true">
+      <created>1667777349127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667777349127</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,16 +129,5 @@
     <MESSAGE value="V1.3&#10;-Class formally known as 'TwoMainFunctions' changed to 'ThreeMainFunctions'&#10;-Next function working, need to take care of out of bounds error&#10;-Added maxMunch function in 'ThreeMainFunctions'&#10;-Deleted 'Position' interface" />
     <MESSAGE value="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
     <option name="LAST_COMMIT_MESSAGE" value="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Components/Next.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
