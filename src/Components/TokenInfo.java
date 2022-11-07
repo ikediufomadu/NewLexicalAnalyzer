@@ -8,4 +8,7 @@ public class TokenInfo {
         currentTokenValue = tokenRead;
         currentKeyword = keyword;
     }
+    public TokenInfo (String tokenRead) {
+        currentKeyword = tokenRead;
+    }
 }

@@ -1,5 +1,6 @@
 package Components;
 
+import static Components.Printer.printer;
 import static Components.ThreeMainFunctions.*;
 
 public class Next {
@@ -9,11 +10,18 @@ public class Next {
         if (charHolder.length == 0) {
             return;
         }
-
         char charToMunch = charHolder[j];
-        while (j < charHolder.length-1 /*!kind(t).equals("end-of-text")*/) {
+
+        String munchedWord = maxMunch(charToMunch);
+
+        TokenInfo t = new TokenInfo(munchedWord);
+
+        while (!kind(t).equals("end-of-text")) {
+            if (j == charHolder.length - 1) {
+                return;
+            }
             j++;
-            maxMunch(charToMunch);
+            //printer(munchedWord, kind(t));
             next(charHolder);
         }
     }

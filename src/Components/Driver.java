@@ -18,6 +18,5 @@ public class Driver{
             System.exit(0);
         }
         reader(fileName);
-        printer();
     }
 }
