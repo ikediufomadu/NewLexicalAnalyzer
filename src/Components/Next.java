@@ -10,18 +10,14 @@ public class Next {
         if (charHolder.length == 0) {
             return;
         }
+        char charToMunch = charHolder[j];
         TokenInfo nextChar = new TokenInfo(charHolder, j);
 
-        char charToMunch = charHolder[j];
-
-        String munchedWord = maxMunch(charToMunch, currentLine, nextChar);
+        String munchedWord = maxMunch(charToMunch, currentLine);
 
         TokenInfo t = new TokenInfo(munchedWord);
 
-        while (!kind(t).equals("end-of-text")) {
-            if (j == charHolder.length - 1) {
-                return;
-            }
+        while (!kind(t).equals("end-of-text") && j < charHolder.length - 1) {
             j++;
             //printer(munchedWord, kind(t));
             next(charHolder, currentLine);

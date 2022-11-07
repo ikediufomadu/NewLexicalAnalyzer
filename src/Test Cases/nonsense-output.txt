@@ -1,0 +1,7 @@
+Program :   kind: "ID", value: "Program"
+lexically  :   kind: "ID", value: "lexically"
+"-"           :   kind: "-"   (there is no value)
+ok           :   kind: "ID", value: "ok"
+"-"           :   kind: "-"   (there is no value)
+2             :   kind: "NUM", value: 2 (this is integer, not string)
+               :   kind: "end-of-text"  (there is no value)

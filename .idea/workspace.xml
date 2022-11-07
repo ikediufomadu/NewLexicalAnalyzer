@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V1.5&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value">
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/non-sense2-output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/non-sense2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/nonsense-output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/nonsense.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/tricky-output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test Cases/tricky.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GlobalVariables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TokenInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TokenInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667785935293</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this">
+      <created>1667791283624</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667791283624</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,7 +162,9 @@
     <MESSAGE value="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
     <MESSAGE value="V1.4&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
     <MESSAGE value="V1.5&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.5&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
+    <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
+    <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
+    <option name="LAST_COMMIT_MESSAGE" value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

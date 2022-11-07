@@ -17,6 +17,7 @@ public class Reader {
             BufferedReader br = new BufferedReader(fr);
             String checker;
             StringBuilder sb = new StringBuilder();
+            TokenInfo end;
             //Reads by line
             while ((checker = br.readLine()) != null) {
                 currentLine++;
@@ -27,6 +28,9 @@ public class Reader {
                     //Skips code with comments
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
+                }
+                if (br.readLine() == null) {
+                    new TokenInfo(null);
                 }
                 next(sb.toString().toCharArray(), currentLine);
                 currentCharInLine = 0;
