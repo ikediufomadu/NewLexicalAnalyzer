@@ -1,5 +1,6 @@
 package Components;
 
+import static Components.GlobalVariables.currentCharInLine;
 import static Components.Printer.printer;
 import static Components.ThreeMainFunctions.*;
 
@@ -12,9 +13,13 @@ public class Next {
             return;
         }
         char charToMunch = charHolder[j];
+
+        //Used in the ThreeMainFunctions file to find the next char
         TokenInfo nextChar = new TokenInfo(charHolder, j);
+
         if (j != charHolder.length - 1) {
             //System.out.println(charToMunch + " " + j);
+            currentCharInLine = j + 1;
             munchedWord = maxMunch(charToMunch, currentLine);
         }
         TokenInfo t = new TokenInfo(munchedWord);

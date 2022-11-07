@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V3&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TokenInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TokenInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -143,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667796381507</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="V3&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
+      <created>1667838012883</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667838012883</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,15 +182,17 @@
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files" />
-    <option name="LAST_COMMIT_MESSAGE" value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files" />
+    <MESSAGE value="V3&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;-Kind function needs to recognize a null value as EOF" />
+    <MESSAGE value="V3&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
+    <option name="LAST_COMMIT_MESSAGE" value="V3&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Components/Driver.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

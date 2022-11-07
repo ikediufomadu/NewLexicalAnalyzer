@@ -13,12 +13,13 @@ import static Components.ThreeMainFunctions.kind;
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
         File f = new File(filenameToRead);
+
         if (f.exists() && !f.isDirectory() && f.isFile() && f.canRead()) {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
             String checker;
             StringBuilder sb = new StringBuilder();
-            TokenInfo end;
+
             //Reads by line
             while ((checker = br.readLine()) != null) {
                 currentLine++;
@@ -30,8 +31,9 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                next(sb.toString().toCharArray(), currentLine);
                 currentCharInLine = 0;
+                next(sb.toString().toCharArray(), currentLine);
+
             }
             if (br.readLine() == null) {
                 kind(new TokenInfo(null));
