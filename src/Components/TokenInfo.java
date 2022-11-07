@@ -1,7 +1,7 @@
 package Components;
 
 public class TokenInfo {
-    String currentTokenValue;
+    static String currentTokenValue;
     String currentKeyword;
     static char nextChar;
 

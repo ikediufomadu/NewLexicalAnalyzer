@@ -1,6 +1,5 @@
 // This program should print the number 20.
-ab1abc12bc
-222 45 4p23 34progra34m Twenty:
+ab11b program Twenty:
   int a;
   int b;
   a := 2;

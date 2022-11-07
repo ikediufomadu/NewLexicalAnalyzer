@@ -8,6 +8,7 @@ import java.io.IOException;
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
 import static Components.Next.next;
+import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
@@ -29,11 +30,11 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                if (br.readLine() == null) {
-                    new TokenInfo(null);
-                }
                 next(sb.toString().toCharArray(), currentLine);
                 currentCharInLine = 0;
+            }
+            if (br.readLine() == null) {
+                kind(new TokenInfo(null));
             }
             br.close();
             fr.close();

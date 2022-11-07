@@ -8,7 +8,7 @@ import static Components.HelperFunctions.*;
 import static Components.ThreeMainFunctions.*;
 
 public class Printer {
-    public static void printer(String munchedWord, String kindValue) {
+    public static void printer(String kindValue) {
         System.out.println("Make sure to implement this correctly after you're done with everything else");
         return;
         /*for (Map.Entry<Integer, List<String>> entry : wordsMap.entrySet()) {

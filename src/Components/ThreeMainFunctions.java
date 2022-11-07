@@ -9,6 +9,8 @@ import static Components.HelperFunctions.*;
 public class ThreeMainFunctions {
     static String munchedString = "";
     static String munchedNumber = "";
+    static String munchedSymbol = "";
+    static String nothingWasMunched = "";
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         String checker = String.valueOf(t);
@@ -19,7 +21,7 @@ public class ThreeMainFunctions {
             value(t);
         }
         else if (Character.isDigit(tFirstChar)) {
-            t.currentKeyword = "'NUM";
+            t.currentKeyword = "'NUM'";
             value(t);
         }
         else if (t.equals("end") || t.equals(null)){
@@ -31,6 +33,7 @@ public class ThreeMainFunctions {
             for (Map.Entry<String, HashSet<String>> entry : map.entrySet()) {
                 //Checks if t is a keyword or symbol
                 if (t.equals(entry)) {
+                    TokenInfo.currentTokenValue = String.valueOf(t);
                     return "'" + t.currentTokenValue + "'";
                 }
             }
@@ -51,33 +54,42 @@ public class ThreeMainFunctions {
     public static String maxMunch(char charToMunch, int currentLine) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         char nextOne = TokenInfo.nextChar;
-        //System.out.println(charToMunch + " This is the current char");
-        //System.out.println(nextOne + " This is the current char pointed");
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
-            System.out.println(munchedString);
             if (Character.isDigit(nextOne)){
                 munchedString += nextOne;
             }
             //CHECK IF NEXT CHAR IS ALSO A LETTER, OR A NUMBER.
-            //If an invalid char is reached, return munchedstring and then call reportLexicalError
-            //When a symbol is introduced stop munch.
-
-            return munchedString;
+            //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
             munchedNumber += charToMunch;
-            System.out.println(munchedNumber);
-
-            return munchedNumber;
+        }
+        else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
+            munchedSymbol += charToMunch;
         }
         //Adds munchedNumber/munchedString to words list when a space is hit
-        else if (Character.isWhitespace(charToMunch)) {
-            wordList.add(munchedString);
-            wordList.add(munchedNumber);
-            munchedString = "";
-            munchedNumber = "";
+        else if (Character.isWhitespace(charToMunch) /*&& (munchedString.length() >= 1 || munchedString.length() > 0|| munchedSymbol.length() > 0*/) {
+            //Need to make sure that it is not adding partially finished strings to the list
+            //Need to figure out which one to print first. Use if condition to check out of the three ints which one is the least and then print the corresponding string
+            if (munchedString.length() > 0) {
+                wordList.add(munchedString);
+                System.out.println(munchedString);
+                munchedString = "";
+            }
+            else if (munchedNumber.length() > 0) {
+                wordList.add(munchedNumber);
+                System.out.println(munchedNumber);
+                munchedNumber = "";
+            }
+            else if (munchedSymbol.length() > 0) {
+                wordList.add(munchedSymbol);
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
         }
-        return munchedString;
+        //Figure out which string to return to the function call
+
+        return nothingWasMunched;
     }
 }
