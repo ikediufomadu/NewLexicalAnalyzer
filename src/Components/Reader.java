@@ -28,7 +28,7 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                next(sb.toString().toCharArray());
+                next(sb.toString().toCharArray(), currentLine);
                 currentCharInLine = 0;
             }
             br.close();

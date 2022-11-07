@@ -48,14 +48,21 @@ public class ThreeMainFunctions {
         }
         return "";
     }
-
-    public static String maxMunch(char charToMunch) {
+    public static String maxMunch(char charToMunch, int currentLine, TokenInfo nextChar) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
-        if (charToMunch != ' ') {
+        //char nextOne = TokenInfo.nextChar;
+        char s = nextChar.nextChar;
+        if (Character.isDigit(charToMunch)) {
+            munchedNumber += charToMunch;
+            System.out.println(munchedNumber);
 
+            return munchedNumber;
         }
-        if (Character.isLetter(charToMunch)) {
+        else if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
+            if (Character.isDigit(s)){
+                munchedString += s;
+            }
             //CHECK IF NEXT CHAR IS ALSO A LETTER, OR A NUMBER.
             //If an invalid char is reached, return munchedstring and then call reportLexicalError
             //When a symbol is introduced stop munch.
@@ -65,13 +72,13 @@ public class ThreeMainFunctions {
 
             return munchedString;
         }
-        else if (Character.isDigit(charToMunch)) {
-            munchedNumber += charToMunch;
-            //CHECK IF NEXT CHAR IS ALSO A NUMBER, IF SO CONTINUE TO MUNCH
-            //ELSE APPEND MUNCHED STRING TO THE WORDS LIST
-            System.out.println(munchedString);
 
-            return munchedNumber;
+        //Adds munchedNumber/munchedString to words list when a space is hit
+        else if (Character.isWhitespace(charToMunch)) {
+            wordList.add(munchedString);
+            wordList.add(munchedNumber);
+            munchedString = "";
+            munchedNumber = "";
         }
         return munchedString;
     }

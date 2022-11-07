@@ -6,13 +6,15 @@ import static Components.ThreeMainFunctions.*;
 public class Next {
     static int j = 0;
     //Gets next lexeme
-    public static void next(char[] charHolder) {
+    public static void next(char[] charHolder, int currentLine) {
         if (charHolder.length == 0) {
             return;
         }
+        TokenInfo nextChar = new TokenInfo(charHolder, j);
+
         char charToMunch = charHolder[j];
 
-        String munchedWord = maxMunch(charToMunch);
+        String munchedWord = maxMunch(charToMunch, currentLine, nextChar);
 
         TokenInfo t = new TokenInfo(munchedWord);
 
@@ -22,7 +24,7 @@ public class Next {
             }
             j++;
             //printer(munchedWord, kind(t));
-            next(charHolder);
+            next(charHolder, currentLine);
         }
     }
 }
