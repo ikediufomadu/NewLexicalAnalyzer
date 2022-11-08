@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V6&#10;Kinda working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V6.1&#10;-Got rid of maxMunch logic&#10;-Added stringReset method in HelperFunctions&#10;-Implemented stringReset within Next method&#10;-Uncommented nextMethod within Reader method&#10;-Changed NOTHINGWASMUNCHED value from empty string to null within ThreeMainFunctions&#10;-Removed maxMunch logic from ThreeMainFunctions maxMunch method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667924050280</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="V6.1&#10;-Got rid of maxMunch logic&#10;-Added stringReset method in HelperFunctions&#10;-Implemented stringReset within Next method&#10;-Uncommented nextMethod within Reader method&#10;-Changed NOTHINGWASMUNCHED value from empty string to null within ThreeMainFunctions&#10;-Removed maxMunch logic from ThreeMainFunctions maxMunch method">
+      <created>1667928692575</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667928692575</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -216,6 +217,7 @@
     <MESSAGE value="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
     <MESSAGE value="V5&#10;-Code outputs&#10;-Next function needs to allow last word/char at end of lines&#10;-maxMunch logic needs work&#10;-Kind function needs to recognize a null value as EOF" />
     <MESSAGE value="V6&#10;Kinda working" />
-    <option name="LAST_COMMIT_MESSAGE" value="V6&#10;Kinda working" />
+    <MESSAGE value="V6.1&#10;-Got rid of maxMunch logic&#10;-Added stringReset method in HelperFunctions&#10;-Implemented stringReset within Next method&#10;-Uncommented nextMethod within Reader method&#10;-Changed NOTHINGWASMUNCHED value from empty string to null within ThreeMainFunctions&#10;-Removed maxMunch logic from ThreeMainFunctions maxMunch method" />
+    <option name="LAST_COMMIT_MESSAGE" value="V6.1&#10;-Got rid of maxMunch logic&#10;-Added stringReset method in HelperFunctions&#10;-Implemented stringReset within Next method&#10;-Uncommented nextMethod within Reader method&#10;-Changed NOTHINGWASMUNCHED value from empty string to null within ThreeMainFunctions&#10;-Removed maxMunch logic from ThreeMainFunctions maxMunch method" />
   </component>
 </project>
