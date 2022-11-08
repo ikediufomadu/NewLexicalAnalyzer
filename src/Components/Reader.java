@@ -24,15 +24,12 @@ public class Reader {
             while ((checker = br.readLine()) != null) {
                 currentLine++;
                 for (int i = 0; i < checker.length(); i++) {
-                    currentCharInLine++;
                     char c = checker.charAt(i);
-
                     //Skips code with comments
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                currentCharInLine = 0;
-                //next(sb.toString().toCharArray(), currentLine);
+                next(sb.toString().toCharArray(), currentLine);
 
             }
             if (br.readLine() == null) {

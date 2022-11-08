@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
+import static Components.ThreeMainFunctions.*;
 
 public class HelperFunctions {
     //Report syntax errors
@@ -30,7 +31,11 @@ public class HelperFunctions {
         currentLine = 0;
         currentCharInLine = 0;
     }
-
+    public static void stringReset(){
+        munchedString = "";
+        munchedNumber = "";
+        munchedSymbol = "";
+    }
     public static String position(int currentLine, int currentCharInLine) {
         return (currentLine) + ":" + (currentCharInLine);
     }
