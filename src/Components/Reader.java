@@ -32,7 +32,7 @@ public class Reader {
                     sb.append(c);
                 }
                 currentCharInLine = 0;
-                next(sb.toString().toCharArray(), currentLine);
+                //next(sb.toString().toCharArray(), currentLine);
 
             }
             if (br.readLine() == null) {

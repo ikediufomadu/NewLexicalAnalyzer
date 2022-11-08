@@ -2,13 +2,9 @@ package Components;
 
 public class TokenInfo {
     static String currentTokenValue;
-    String currentKeyword;
+    static String currentKeyword;
     static char nextChar;
 
-    public TokenInfo (String keyword, String tokenRead) {
-        currentTokenValue = tokenRead;
-        currentKeyword = keyword;
-    }
     public TokenInfo (String tokenRead) {
         currentKeyword = tokenRead;
     }

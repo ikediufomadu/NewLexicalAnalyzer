@@ -18,7 +18,7 @@ public class Next {
         TokenInfo nextChar = new TokenInfo(charHolder, j);
 
         if (j != charHolder.length - 1) {
-            //System.out.println(charToMunch + " " + j);
+            System.out.println(charToMunch + " " + j);
             currentCharInLine = j + 1;
             munchedWord = maxMunch(charToMunch, currentLine);
         }
