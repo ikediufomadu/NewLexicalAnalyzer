@@ -36,7 +36,7 @@ public class ThreeMainFunctions {
                     TokenInfo.currentTokenValue = String.valueOf(t);
                     return "'" + t.currentTokenValue + "'";
                 }
-            }
+            }l
         }
         return t.currentKeyword;
     }
