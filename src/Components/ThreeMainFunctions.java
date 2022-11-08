@@ -10,7 +10,7 @@ public class ThreeMainFunctions {
     static String munchedString = "";
     static String munchedNumber = "";
     static String munchedSymbol = "";
-    static String nothingWasMunched = "";
+    static final String NOTHINGWASMUNCHED = "";
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         String checker = String.valueOf(t);
@@ -18,11 +18,11 @@ public class ThreeMainFunctions {
 
         if (Character.isLetter(tFirstChar)) {
             t.currentKeyword = "'ID'";
-            value(t);
+            //value(t);
         }
         else if (Character.isDigit(tFirstChar)) {
             t.currentKeyword = "'NUM'";
-            value(t);
+            //value(t);
         }
         else if (t.equals("end") || t.equals(null)){
             t.currentKeyword = "end-of-text";
@@ -43,16 +43,20 @@ public class ThreeMainFunctions {
 
     //Get value of lexeme if it is an ID or NUM
     public static String value(TokenInfo t) {
-        if (t.currentKeyword.equals("'ID'")) {
+        if (/*t.currentKeyword.equals("'ID'")*/kind(t).equals("'ID'")) {
+            TokenInfo.currentTokenValue = String.valueOf(t);
             return t.currentTokenValue;
         }
-        else if (t.currentKeyword.equals("'NUM'")) {
+        else if (/*t.currentKeyword.equals("'NUM'")*/kind(t).equals("'NUM'")) {
+            TokenInfo.currentTokenValue = String.valueOf(t);
             return t.currentTokenValue;
         }
         return "";
     }
     public static String maxMunch(char charToMunch, int currentLine) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
+        System.out.println(charToMunch);
+
         char nextOne = TokenInfo.nextChar;
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
@@ -68,28 +72,32 @@ public class ThreeMainFunctions {
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
         }
-        //Adds munchedNumber/munchedString to words list when a space is hit
-        else if (Character.isWhitespace(charToMunch) /*&& (munchedString.length() >= 1 || munchedString.length() > 0|| munchedSymbol.length() > 0*/) {
+        //Adds munchedNumber/munchedString/munchedSymbol to words list when a space is hit
+        else if (Character.isWhitespace(charToMunch) /*Need to account for new lines*/) {
             //Need to make sure that it is not adding partially finished strings to the list
-            //Need to figure out which one to print first. Use if condition to check out of the three ints which one is the least and then print the corresponding string
+            //Figure out what string to send back to Next function
+            //Figure out what to print first.
             if (munchedString.length() > 0) {
                 wordList.add(munchedString);
-                System.out.println(munchedString);
+                TokenInfo t = new TokenInfo(munchedString);
+                System.out.println(munchedString + " munched String was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
                 munchedString = "";
             }
             else if (munchedNumber.length() > 0) {
                 wordList.add(munchedNumber);
-                System.out.println(munchedNumber);
+                TokenInfo t = new TokenInfo(munchedNumber);
+                System.out.println(munchedNumber + " munched Number was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
                 munchedNumber = "";
             }
             else if (munchedSymbol.length() > 0) {
                 wordList.add(munchedSymbol);
-                System.out.println(munchedSymbol);
+                TokenInfo t = new TokenInfo(munchedSymbol);
+                System.out.println(munchedSymbol + " munched Symbol was outputted\nKind is: "  + kind(t));
                 munchedSymbol = "";
             }
         }
         //Figure out which string to return to the function call
 
-        return nothingWasMunched;
+        return NOTHINGWASMUNCHED;
     }
 }
