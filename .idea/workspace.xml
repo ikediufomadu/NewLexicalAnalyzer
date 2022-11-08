@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="Revert &quot;V3 -Next function working --Will not address final line of files if it is only one word due to condition put in place to stop repeating values. -maxMunch almost fixed --Output gets messy when a number character follows a letter character in a string ---Ex 'ab1b', 'ab11', 'ab11b' ----Possibly due to current logic within maxMunch -Kind function needs to recognize a null value as EOF&quot;&#10;&#10;This reverts commit c81ab0bd">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
@@ -138,7 +138,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667796381507</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
+      <created>1667878649510</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667878649510</updated>
+    </task>
+    <task id="LOCAL-00013" summary="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
+      <created>1667878807705</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667878807705</updated>
+    </task>
+    <task id="LOCAL-00014" summary="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF">
+      <created>1667878877974</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667878877974</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -176,6 +197,7 @@
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files" />
-    <option name="LAST_COMMIT_MESSAGE" value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files" />
+    <MESSAGE value="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
+    <option name="LAST_COMMIT_MESSAGE" value="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
   </component>
 </project>

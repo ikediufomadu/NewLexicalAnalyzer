@@ -14,17 +14,15 @@ public class ThreeMainFunctions {
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         String checker = String.valueOf(t);
+        //System.out.println(checker + " this is checker");
         char tFirstChar = checker.charAt(0);
-
         if (Character.isLetter(tFirstChar)) {
-            t.currentKeyword = "'ID'";
-            //value(t);
+            return t.currentKeyword = "'ID'";
         }
         else if (Character.isDigit(tFirstChar)) {
-            t.currentKeyword = "'NUM'";
-            //value(t);
+            return t.currentKeyword = "'NUM'";
         }
-        else if (t.equals("end") || t.equals(null)){
+        else if (t.equals(null)){
             t.currentKeyword = "end-of-text";
             System.out.println("Reached the end of the file.\n...\nResetting program\n\n");
             sequenceKeepRunning();
@@ -43,13 +41,11 @@ public class ThreeMainFunctions {
 
     //Get value of lexeme if it is an ID or NUM
     public static String value(TokenInfo t) {
-        if (/*t.currentKeyword.equals("'ID'")*/kind(t).equals("'ID'")) {
-            TokenInfo.currentTokenValue = String.valueOf(t);
-            return t.currentTokenValue;
+        if (kind(t).equals("'ID'")) {
+            return TokenInfo.currentTokenValue = String.valueOf(t);
         }
-        else if (/*t.currentKeyword.equals("'NUM'")*/kind(t).equals("'NUM'")) {
-            TokenInfo.currentTokenValue = String.valueOf(t);
-            return t.currentTokenValue;
+        else if (kind(t).equals("'NUM'")) {
+            return TokenInfo.currentTokenValue = String.valueOf(t);
         }
         return "";
     }
@@ -63,7 +59,6 @@ public class ThreeMainFunctions {
             if (Character.isDigit(nextOne)){
                 munchedString += nextOne;
             }
-            //CHECK IF NEXT CHAR IS ALSO A LETTER, OR A NUMBER.
             //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
@@ -80,19 +75,20 @@ public class ThreeMainFunctions {
             if (munchedString.length() > 0) {
                 wordList.add(munchedString);
                 TokenInfo t = new TokenInfo(munchedString);
-                System.out.println(munchedString + " munched String was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
+                //System.out.println(munchedString + " munched String was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
                 munchedString = "";
+                munchedNumber = "";
             }
             else if (munchedNumber.length() > 0) {
                 wordList.add(munchedNumber);
                 TokenInfo t = new TokenInfo(munchedNumber);
-                System.out.println(munchedNumber + " munched Number was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
+               //System.out.println(munchedNumber + " munched Number was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
                 munchedNumber = "";
             }
             else if (munchedSymbol.length() > 0) {
                 wordList.add(munchedSymbol);
                 TokenInfo t = new TokenInfo(munchedSymbol);
-                System.out.println(munchedSymbol + " munched Symbol was outputted\nKind is: "  + kind(t));
+               // System.out.println(munchedSymbol + " munched Symbol was outputted\nKind is: "  + kind(t) + "\nValue is: " + value(t) + "\n");
                 munchedSymbol = "";
             }
         }
