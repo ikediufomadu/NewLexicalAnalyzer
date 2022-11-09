@@ -41,10 +41,10 @@ public class ThreeMainFunctions {
         return "";
     }
 
-    public static String maxMunch(char charToMunch, int currentLine, char firstIndex) {
+    public static String maxMunch(char charToMunch, int currentLine) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         //Last character does not get sent, fix this
-        //System.out.println(charToMunch);
+        System.out.println(charToMunch);
 
         char nextOne = TokenInfo.nextChar;
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
