@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V8.1&#10;-Fixed maxMunch logic&#10;-- maxMunch needs to know when to print strings and clear them after" />
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V7&#10;Temp commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
