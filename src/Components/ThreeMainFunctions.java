@@ -40,9 +40,11 @@ public class ThreeMainFunctions {
         }
         return "";
     }
-    public static String maxMunch(char charToMunch, int currentLine) {
+
+    public static String maxMunch(char charToMunch, int currentLine, char firstIndex) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         //Last character does not get sent, fix this
+        //System.out.println(charToMunch);
 
         char nextOne = TokenInfo.nextChar;
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
@@ -61,8 +63,6 @@ public class ThreeMainFunctions {
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
         }
-
-
         return NOTHINGWASMUNCHED;
     }
 }
