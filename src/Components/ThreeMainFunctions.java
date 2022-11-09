@@ -51,7 +51,7 @@ public class ThreeMainFunctions {
             //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
-            if (Character.isWhitespace(TokenInfo.lastChar) || (TokenInfo.firstChar)) {
+            if (Character.isWhitespace(TokenInfo.lastChar) /*|| (TokenInfo.firstChar)*/) {
                 munchedNumber += charToMunch;
             }
             else if (!Character.isWhitespace(TokenInfo.lastChar)) {
