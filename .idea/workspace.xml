@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V7&#10;Temp commit">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667958383518</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority">
+      <created>1667964770560</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667964770560</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -252,6 +262,7 @@
     <MESSAGE value="V7.1&#10;-Got rid of 3rd parameter sent to maxMunch&#10;-Got rid of logic in next, was useless" />
     <MESSAGE value="V8&#10;-Fixed maxMunch logic&#10;-- maxMunch needs to know when to print strings and clear them after" />
     <MESSAGE value="V8.1&#10;-Fixed maxMunch logic&#10;-- maxMunch needs to know when to print strings and clear them after" />
-    <option name="LAST_COMMIT_MESSAGE" value="V8.1&#10;-Fixed maxMunch logic&#10;-- maxMunch needs to know when to print strings and clear them after" />
+    <MESSAGE value="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority" />
+    <option name="LAST_COMMIT_MESSAGE" value="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority" />
   </component>
 </project>

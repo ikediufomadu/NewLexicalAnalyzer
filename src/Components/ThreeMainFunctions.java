@@ -41,10 +41,10 @@ public class ThreeMainFunctions {
         return "";
     }
 
-    public static String maxMunch(char charToMunch, int currentLine) {
+    public static String maxMunch(char charToMunch, int currentLine, int arrayLength, int j) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         //Last character does not get sent, fix this
-        //System.out.println(charToMunch);
+        System.out.println(charToMunch + " munch this");
 
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
@@ -67,6 +67,21 @@ public class ThreeMainFunctions {
             munchedSymbol += charToMunch;
         }
         if (Character.isWhitespace(charToMunch)) {
+            if (munchedString.length() > 0) {
+                System.out.println(munchedString);
+                munchedString = "";
+            }
+            if (munchedNumber.length() > 0) {
+                System.out.println(munchedNumber);
+                munchedNumber = "";
+            }
+            if (munchedSymbol.length() > 0) {
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
+        }
+        else if (j == arrayLength) {
+
             if (munchedString.length() > 0) {
                 System.out.println(munchedString);
                 munchedString = "";
