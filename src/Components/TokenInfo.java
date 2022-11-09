@@ -4,7 +4,7 @@ public class TokenInfo {
     static String currentTokenValue;
     static String currentKeyword;
     static char lastChar;
-    static char firstChar;
+    static boolean firstChar;
 
     public TokenInfo (String tokenRead) {
         currentKeyword = tokenRead;
@@ -13,9 +13,10 @@ public class TokenInfo {
         if (j > 0) {
             lastChar = charHolder[j - 1];
         }
-//        else if (j == 0) {
+        else if (j == 0) {
 //            lastChar = charHolder[j];
-//            firstChar = lastChar;
-//        }
+            firstChar = true;
+        }
+        else {firstChar = false;}
     }
 }

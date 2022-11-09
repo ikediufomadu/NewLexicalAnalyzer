@@ -51,7 +51,7 @@ public class ThreeMainFunctions {
             //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
-            if (Character.isWhitespace(TokenInfo.lastChar)) {
+            if (Character.isWhitespace(TokenInfo.lastChar) || (TokenInfo.firstChar)) {
                 munchedNumber += charToMunch;
             }
             else if (!Character.isWhitespace(TokenInfo.lastChar)) {
@@ -66,9 +66,20 @@ public class ThreeMainFunctions {
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
         }
-        System.out.println(munchedString);
-        System.out.println(munchedNumber);
-        System.out.println(munchedSymbol);
+        if (Character.isWhitespace(charToMunch)) {
+            if (munchedString.length() > 0) {
+                System.out.println(munchedString);
+                munchedString = "";
+            }
+            if (munchedNumber.length() > 0) {
+                System.out.println(munchedNumber);
+                munchedNumber = "";
+            }
+            if (munchedSymbol.length() > 0) {
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
+        }
         return NOTHINGWASMUNCHED;
     }
 }
