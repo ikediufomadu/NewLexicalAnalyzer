@@ -1,1 +1,1 @@
-a1b2b 2b b2
+Program lexically-ok-2-

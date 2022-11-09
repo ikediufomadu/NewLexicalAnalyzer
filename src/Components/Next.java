@@ -17,7 +17,7 @@ public class Next {
 
         //Used in the ThreeMainFunctions file to find the next char
         TokenInfo nextChar = new TokenInfo(charHolder, j);
-        if (j != charHolder.length - 1) {
+        if (j != charHolder.length) {
             munchedWord = maxMunch(charToMunch, currentLine, arrayLength, j);
         }
         if (munchedWord != null) {
@@ -25,8 +25,8 @@ public class Next {
             stringReset();
         }
         TokenInfo t = new TokenInfo(munchedWord);
-        while (!kind(t).equals("end-of-text") && j < charHolder.length - 1) {
-            j++;
+        j++;
+        while (!kind(t).equals("end-of-text") && j < charHolder.length ) {
             //printer(kind(t));
             next(charHolder, currentLine, arrayLength);
         }

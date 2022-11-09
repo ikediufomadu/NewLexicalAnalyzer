@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
@@ -264,5 +265,17 @@
     <MESSAGE value="V8.1&#10;-Fixed maxMunch logic&#10;-- maxMunch needs to know when to print strings and clear them after" />
     <MESSAGE value="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority" />
     <option name="LAST_COMMIT_MESSAGE" value="V8&#10;-maxMunch logic fully fixed&#10;-need to figure out string return priority" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/Components/Next.java</url>
+          <line>8</line>
+          <properties field="j" class="Components.Next" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

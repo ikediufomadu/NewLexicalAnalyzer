@@ -36,6 +36,7 @@ public class ThreeMainFunctions {
             return TokenInfo.currentTokenValue = String.valueOf(t);
         }
         else if (kind(t).equals("'NUM'")) {
+            //return int value, not a string
             return TokenInfo.currentTokenValue = String.valueOf(t);
         }
         return "";
@@ -44,7 +45,7 @@ public class ThreeMainFunctions {
     public static String maxMunch(char charToMunch, int currentLine, int arrayLength, int j) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         //Last character does not get sent, fix this
-        System.out.println(charToMunch + " munch this");
+        //System.out.println(charToMunch + " munch this");
 
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
@@ -55,7 +56,10 @@ public class ThreeMainFunctions {
                 munchedNumber += charToMunch;
             }
             else if (!Character.isWhitespace(TokenInfo.lastChar)) {
-                if (munchedString.length() > 0) {
+                if (!Character.isLetter(TokenInfo.lastChar)) {
+                    munchedNumber += charToMunch;
+                }
+                else if (Character.isLetter(TokenInfo.lastChar)) {
                     munchedString += charToMunch;
                 }
                 else {
@@ -65,6 +69,10 @@ public class ThreeMainFunctions {
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
+            if (Character.isLetter(TokenInfo.lastChar)) {
+                System.out.println(munchedString);
+                munchedString = "";
+            }
         }
         if (Character.isWhitespace(charToMunch)) {
             if (munchedString.length() > 0) {
