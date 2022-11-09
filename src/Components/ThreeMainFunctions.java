@@ -44,25 +44,31 @@ public class ThreeMainFunctions {
     public static String maxMunch(char charToMunch, int currentLine) {
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
         //Last character does not get sent, fix this
-        System.out.println(charToMunch);
+        //System.out.println(charToMunch);
 
-        char nextOne = TokenInfo.nextChar;
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
-            if (Character.isDigit(nextOne)){
-                munchedString += nextOne;
-            }
             //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
-            String numberChecker = Character.toString(charToMunch);
-            if (!munchedString.contains(numberChecker)){
+            if (Character.isWhitespace(TokenInfo.lastChar)) {
                 munchedNumber += charToMunch;
+            }
+            else if (!Character.isWhitespace(TokenInfo.lastChar)) {
+                if (munchedString.length() > 0) {
+                    munchedString += charToMunch;
+                }
+                else {
+                    munchedNumber += charToMunch;
+                }
             }
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
         }
+        System.out.println(munchedString);
+        System.out.println(munchedNumber);
+        System.out.println(munchedSymbol);
         return NOTHINGWASMUNCHED;
     }
 }
