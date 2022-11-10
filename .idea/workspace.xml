@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V8.3&#10;-Fixed 8.2 issue by adding a space to string passed from reader method to 'next' method">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GlobalVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668096115391</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="V10&#10;-maxMunch code works">
+      <created>1668112110729</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1668112110729</updated>
+    </task>
+    <task id="LOCAL-00028" summary="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method">
+      <created>1668116013938</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1668116013938</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -293,6 +308,8 @@
     <MESSAGE value="V8.1&#10;-Stopped repetitive printing of characters" />
     <MESSAGE value="V8.2&#10;-Make initialization and declaration much cleaner in next method&#10;-Stopped repetitive printing of characters&#10;-Prints sends all characters from beginning to end to maxMunch IF the last character is NOT a letter. Need to figure out why this happens" />
     <MESSAGE value="V8.3&#10;-Fixed 8.2 issue by adding a space to string passed from reader method to 'next' method" />
-    <option name="LAST_COMMIT_MESSAGE" value="V8.3&#10;-Fixed 8.2 issue by adding a space to string passed from reader method to 'next' method" />
+    <MESSAGE value="V10&#10;-maxMunch code works" />
+    <MESSAGE value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method" />
+    <option name="LAST_COMMIT_MESSAGE" value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method" />
   </component>
 </project>
