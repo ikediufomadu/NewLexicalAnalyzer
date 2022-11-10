@@ -127,11 +127,11 @@ public class ThreeMainFunctions {
             }
         }
         if (Character.isWhitespace(charToMunch)) {
-            if (Character.isLetter(TokenInfo.lastChar)) {
+            if (Character.isLetter(TokenInfo.lastChar) || munchedString.length() > 0) {
                 System.out.println(munchedString);
                 munchedString = "";
             }
-            if (Character.isDigit(TokenInfo.lastChar)) {
+            if (Character.isDigit(TokenInfo.lastChar) || munchedNumber.length() > 0) {
                 System.out.println(munchedNumber);
                 munchedNumber = "";
             }
