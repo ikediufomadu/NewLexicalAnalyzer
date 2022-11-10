@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GlobalVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668116013938</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean">
+      <created>1668118662315</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1668118662315</updated>
+    </task>
+    <task id="LOCAL-00030" summary="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean">
+      <created>1668118685866</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1668118685866</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -285,7 +297,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="V1.0&#10;-Main classes created&#10;-Working on 'Next' function" />
     <MESSAGE value="V1.1&#10;-Printer class created&#10;-Working on 'Next' function" />
     <MESSAGE value="V1.2&#10;-Next function has base case recursion implemented." />
     <MESSAGE value="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped" />
@@ -310,6 +321,7 @@
     <MESSAGE value="V8.3&#10;-Fixed 8.2 issue by adding a space to string passed from reader method to 'next' method" />
     <MESSAGE value="V10&#10;-maxMunch code works" />
     <MESSAGE value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method" />
-    <option name="LAST_COMMIT_MESSAGE" value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method" />
+    <MESSAGE value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean" />
   </component>
 </project>

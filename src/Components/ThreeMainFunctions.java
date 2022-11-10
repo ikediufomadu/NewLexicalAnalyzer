@@ -43,10 +43,6 @@ public class ThreeMainFunctions {
     }
 
     public static String maxMunch(char charToMunch, int currentLine, int j) {
-        //If an invalid char is reached, return munchedString and then call reportLexicalError
-        //This is in the wrong spot. It calls but does not return last string. Fix this
-        reportLexicalError(charToMunch, currentLine, currentCharInLine);
-
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
@@ -84,7 +80,7 @@ public class ThreeMainFunctions {
             }
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
-            if (reportLexicalError(charToMunch, currentLine, currentCharInLine)) {
+            if (reportLexicalError(charToMunch)) {
                 if (munchedString.length() > 0) {
                     System.out.println(munchedString);
                     wordList.add(munchedString);
@@ -191,9 +187,6 @@ public class ThreeMainFunctions {
                 munchedSymbol = "";
             }
         }
-//        if (wordList.size() > 0){
-//            return wordList.get(j);
-//        }
         return NOTHINGWASMUNCHED;
     }
 }
