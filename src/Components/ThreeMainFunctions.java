@@ -43,21 +43,32 @@ public class ThreeMainFunctions {
     }
 
     public static String maxMunch(char charToMunch, int currentLine, int arrayLength, int j) {
+        //If an invalid char is reached, return munchedString and then call reportLexicalError
+        //This is in the wrong spot. It calls but does not return last string. Fix this
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
-        //Last character does not get sent, fix this
-        //System.out.println(charToMunch + " munch this");
 
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
-            //If an invalid char is reached, return munchedString and then call reportLexicalError
         }
         else if (Character.isDigit(charToMunch)) {
             if (Character.isWhitespace(TokenInfo.lastChar)) {
                 munchedNumber += charToMunch;
             }
             else if (!Character.isWhitespace(TokenInfo.lastChar)) {
-                if (!Character.isLetter(TokenInfo.lastChar)) {
-                    munchedNumber += charToMunch;
+                if (Character.isDigit(TokenInfo.lastChar)) {
+                    char[] hasNumber = munchedString.toCharArray();
+                    boolean anyNumber = false;
+                    for (char c : hasNumber) {
+                        if (Character.isDigit(c)) {
+                            anyNumber = true;
+                        }
+                    }
+                    if (anyNumber) {
+                        munchedString += charToMunch;
+                    }
+                    else {
+                        munchedNumber += charToMunch;
+                    }
                 }
                 else if (Character.isLetter(TokenInfo.lastChar)) {
                     munchedString += charToMunch;
@@ -69,6 +80,7 @@ public class ThreeMainFunctions {
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             munchedSymbol += charToMunch;
+            //Need to fix this logic because it allows appending of symbols that shouldn't append to each other
             if (Character.isLetter(TokenInfo.lastChar)) {
                 System.out.println(munchedString);
                 munchedString = "";
