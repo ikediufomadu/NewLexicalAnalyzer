@@ -25,6 +25,8 @@ public class Reader {
             //Reads by line
             while ((checker = br.readLine()) != null) {
                 currentLine++;
+                //Accounts for last index in string, adds a space after it allowing the 'next' function to work with all strings
+                checker += " ";
                 for (int i = 0; i < checker.length(); i++) {
                     char c = checker.charAt(i);
                     //Skips code with comments
