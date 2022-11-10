@@ -79,42 +79,82 @@ public class ThreeMainFunctions {
             }
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
-            munchedSymbol += charToMunch;
             //Need to fix this logic because it allows appending of symbols that shouldn't append to each other
             if (Character.isLetter(TokenInfo.lastChar)) {
                 System.out.println(munchedString);
                 munchedString = "";
             }
+            else if (Character.isDigit(TokenInfo.lastChar)) {
+                System.out.println(munchedNumber);
+                munchedNumber = "";
+            }
+            if (charToMunch == '=' && TokenInfo.nextChar == '<') {
+                munchedSymbol += charToMunch;
+                munchedSymbol += TokenInfo.nextChar;
+                System.out.println(munchedSymbol);
+                munchedSymbol += "";
+            }
+            if (charToMunch == '=' && TokenInfo.lastChar != '>'){
+                munchedSymbol += charToMunch;
+                System.out.println(munchedSymbol);
+                munchedSymbol += "";
+            }
+            if (charToMunch == '!' && TokenInfo.nextChar == '='){
+                munchedSymbol += charToMunch;
+                munchedSymbol += TokenInfo.nextChar;
+                System.out.println(munchedSymbol);
+                munchedSymbol += "";
+            }
+            if (charToMunch == '<' && TokenInfo.lastChar != '='){
+                munchedSymbol += charToMunch;
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
+            if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.nextChar != '<' && TokenInfo.lastChar != '!'){
+                munchedSymbol += charToMunch;
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
+            if (charToMunch == '>' && TokenInfo.nextChar != '='){
+                munchedSymbol += charToMunch;
+                System.out.println(munchedSymbol);
+                munchedSymbol = "";
+            }
+            if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')'){
+                munchedSymbol += charToMunch;
+                System.out.println(munchedSymbol);
+                munchedSymbol =  "";
+            }
         }
         if (Character.isWhitespace(charToMunch)) {
-            if (munchedString.length() > 0) {
+            if (Character.isLetter(TokenInfo.lastChar)) {
                 System.out.println(munchedString);
                 munchedString = "";
             }
-            if (munchedNumber.length() > 0) {
+            if (Character.isDigit(TokenInfo.lastChar)) {
                 System.out.println(munchedNumber);
                 munchedNumber = "";
             }
-            if (munchedSymbol.length() > 0) {
+            if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar)) {
                 System.out.println(munchedSymbol);
                 munchedSymbol = "";
             }
         }
-        else if (j == arrayLength) {
-
-            if (munchedString.length() > 0) {
-                System.out.println(munchedString);
-                munchedString = "";
-            }
-            if (munchedNumber.length() > 0) {
-                System.out.println(munchedNumber);
-                munchedNumber = "";
-            }
-            if (munchedSymbol.length() > 0) {
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
-            }
-        }
+//        else if (j == arrayLength) {
+//
+//            if (Character.isLetter(TokenInfo.lastChar)) {
+//                System.out.println(munchedString);
+//                munchedString = "";
+//            }
+//            if (Character.isDigit(TokenInfo.lastChar)) {
+//                System.out.println(munchedNumber);
+//                munchedNumber = "";
+//            }
+//            if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar)) {
+//                System.out.println(munchedSymbol);
+//                munchedSymbol = "";
+//            }
+//        }
         return NOTHINGWASMUNCHED;
     }
 }
