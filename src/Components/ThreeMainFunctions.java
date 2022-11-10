@@ -120,7 +120,7 @@ public class ThreeMainFunctions {
                 System.out.println(munchedSymbol);
                 munchedSymbol = "";
             }
-            if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')'){
+            if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':'){
                 munchedSymbol += charToMunch;
                 System.out.println(munchedSymbol);
                 munchedSymbol =  "";
@@ -135,7 +135,7 @@ public class ThreeMainFunctions {
                 System.out.println(munchedNumber);
                 munchedNumber = "";
             }
-            if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar)) {
+            if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar) && !Character.isWhitespace(TokenInfo.lastChar)) {
                 System.out.println(munchedSymbol);
                 munchedSymbol = "";
             }
