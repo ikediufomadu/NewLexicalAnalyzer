@@ -1,5 +1,7 @@
 package Components;
 
+import java.util.HashMap;
+
 import static Components.GlobalVariables.*;
 import static Components.HelperFunctions.*;
 
@@ -7,6 +9,8 @@ public class ThreeMainFunctions {
     static String munchedString = "";
     static String munchedNumber = "";
     static String munchedSymbol = "";
+    static HashMap<Integer, String> wordHashMap = new HashMap<>();
+    static int wordListCount = 0;
     static final String NOTHINGWASMUNCHED = null;
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
@@ -42,7 +46,7 @@ public class ThreeMainFunctions {
         return "";
     }
 
-    public static String maxMunch(char charToMunch, int currentLine, int arrayLength, int j) {
+    public static String maxMunch(char charToMunch, int currentLine, int j) {
         //If an invalid char is reached, return munchedString and then call reportLexicalError
         //This is in the wrong spot. It calls but does not return last string. Fix this
         reportLexicalError(charToMunch, currentLine, currentCharInLine);
@@ -50,7 +54,9 @@ public class ThreeMainFunctions {
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
-                System.out.println(munchedNumber);
+                //System.out.println(munchedNumber);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedNumber = "";
             }
         }
@@ -85,57 +91,75 @@ public class ThreeMainFunctions {
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             //Need to fix this logic because it allows appending of symbols that shouldn't append to each other
             if (Character.isLetter(TokenInfo.lastChar)) {
-                System.out.println(munchedString);
+                //System.out.println(munchedString);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedString = "";
             }
             else if (Character.isDigit(TokenInfo.lastChar)) {
-                System.out.println(munchedNumber);
+                //System.out.println(munchedNumber);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedNumber = "";
             }
             // =< logic
             if (charToMunch == '=' && TokenInfo.nextChar == '<') {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // >= logic
             if (charToMunch == '>' && TokenInfo.lastChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // != logic
             if (charToMunch == '!' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // := logic
             if (charToMunch == ':' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // < logic
             if (charToMunch == '<' && TokenInfo.lastChar != '='){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // = logic
-            if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.nextChar != '<'){
+            if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.nextChar != '<' && TokenInfo.lastChar != ':'){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // > logic
             if (charToMunch == '>' && TokenInfo.nextChar != '='){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
             // +, -, *, /, (, ), ;, : logic
@@ -147,23 +171,34 @@ public class ThreeMainFunctions {
                 if (charToMunch == '=' && TokenInfo.lastChar == ':'){
                     munchedSymbol = "";
                 }
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
         }
         if (Character.isWhitespace(charToMunch)) {
             if (Character.isLetter(TokenInfo.lastChar) || munchedString.length() > 0) {
-                System.out.println(munchedString);
+                //System.out.println(munchedString);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedString = "";
             }
             if (Character.isDigit(TokenInfo.lastChar) || munchedNumber.length() > 0) {
-                System.out.println(munchedNumber);
+                //System.out.println(munchedNumber);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedNumber = "";
             }
             if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar) && !Character.isWhitespace(TokenInfo.lastChar)) {
-                System.out.println(munchedSymbol);
+                //System.out.println(munchedSymbol);
+                wordHashMap.put(wordListCount, munchedNumber);
+                wordListCount++;
                 munchedSymbol = "";
             }
+        }
+        if (!wordList.isEmpty()){
+            return wordList.get(wordListCount);
         }
         return NOTHINGWASMUNCHED;
     }

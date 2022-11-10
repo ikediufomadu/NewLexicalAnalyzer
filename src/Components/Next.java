@@ -19,13 +19,13 @@ public class Next {
         //Used in the ThreeMainFunctions file to find the next char
         TokenInfo nextChar = new TokenInfo(charHolder, j);
 
-        //munchedWord is the string passed by the maxMunch function
-        TokenInfo t = new TokenInfo(munchedWord = maxMunch(charToMunch, currentLine, arrayLength, j));
-
-        if (munchedWord != null) {
-            //System.out.println(munchedWord + " hey");
-            stringReset();
+        munchedWord = maxMunch(charToMunch, currentLine, j);
+        //pass wordlist string to kind
+        if (munchedWord != null && !munchedWord.equals(" ")) {
+            System.out.println(munchedWord);
+            //stringReset();
         }
+        TokenInfo t = new TokenInfo(munchedWord);
         j++;
         while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
             //printer(kind(t));
