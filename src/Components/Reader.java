@@ -11,8 +11,6 @@ import static Components.Next.next;
 import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
-    public static int arrayLength;
-
     public static void reader(String filenameToRead) throws IOException {
         File f = new File(filenameToRead);
 
@@ -33,8 +31,7 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                arrayLength = sb.length() - 1;
-                next(sb.toString().toCharArray(), currentLine, arrayLength);
+                next(sb.toString().toCharArray(), currentLine);
 
             }
             if (br.readLine() == null) {

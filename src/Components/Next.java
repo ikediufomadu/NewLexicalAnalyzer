@@ -9,7 +9,7 @@ public class Next {
     static int j = 0;
     static String munchedWord;
     //Gets next lexeme
-    public static void next(char[] charHolder, int currentLine, int arrayLength) {
+    public static void next(char[] charHolder, int currentLine) {
         //On chance an empty array is passed we return
         if (charHolder.length == 0) {
             return;
@@ -29,7 +29,7 @@ public class Next {
         j++;
         while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
             //printer(kind(t));
-            next(charHolder, currentLine, arrayLength);
+            next(charHolder, currentLine);
         }
     }
 }
