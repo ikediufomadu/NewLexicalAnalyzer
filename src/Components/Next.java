@@ -15,8 +15,6 @@ public class Next {
             return;
         }
         char charToMunch = charHolder[j];
-//        System.out.println(j + " this is the current number");
-//        System.out.println(charToMunch);
 
         //Used in the ThreeMainFunctions file to find the next char
         TokenInfo nextChar = new TokenInfo(charHolder, j);
@@ -29,7 +27,7 @@ public class Next {
             stringReset();
         }
         j++;
-        while (!kind(t).equals("end-of-text") && j < charHolder.length - 1) {
+        while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
             //printer(kind(t));
             next(charHolder, currentLine, arrayLength);
         }
