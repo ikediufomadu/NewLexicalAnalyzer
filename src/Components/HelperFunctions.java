@@ -8,11 +8,11 @@ import static Components.ThreeMainFunctions.*;
 
 public class HelperFunctions {
     //Report syntax errors
-    public static void reportLexicalError(char c, int currentLine, int currentCharInLine) {
+    public static boolean reportLexicalError(char c, int currentLine, int currentCharInLine) {
         if (c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']') {
-            System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + c + "'.\nExiting program...");
-            System.exit(0);
+            return true;
         }
+        return false;
     }
 
     //Reruns program after successful tokenization of a file
