@@ -1,6 +1,7 @@
 package Components;
 
 import static Components.GlobalVariables.currentCharInLine;
+import static Components.HelperFunctions.position;
 import static Components.HelperFunctions.stringReset;
 import static Components.Printer.printer;
 import static Components.ThreeMainFunctions.*;
@@ -8,6 +9,7 @@ import static Components.ThreeMainFunctions.*;
 public class Next {
     static int j = 0;
     static String munchedWord;
+    static TokenInfo t;
     //Gets next lexeme
     public static void next(char[] charHolder, int currentLine) {
         //On chance an empty array is passed we return
@@ -21,11 +23,16 @@ public class Next {
 
         munchedWord = maxMunch(charToMunch, currentLine, j);
         //pass wordlist string to kind
-        if (munchedWord != null && !munchedWord.equals(" ")) {
+        if (munchedWord != null) {
+            if (wrongInput) {
+                System.out.println(munchedWord);
+                System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
+                System.exit(0);
+            }
             System.out.println(munchedWord);
-            //stringReset();
+            t = new TokenInfo(munchedWord);
+            stringReset();
         }
-        TokenInfo t = new TokenInfo(munchedWord);
         j++;
         while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
             //printer(kind(t));

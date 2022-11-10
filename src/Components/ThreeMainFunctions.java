@@ -8,6 +8,7 @@ public class ThreeMainFunctions {
     static String munchedNumber = "";
     static String munchedSymbol = "";
     static final String NOTHINGWASMUNCHED = null;
+    static boolean wrongInput = false;
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         String checker = String.valueOf(t);
@@ -51,6 +52,10 @@ public class ThreeMainFunctions {
             }
         }
         else if (Character.isDigit(charToMunch)) {
+            if (TokenInfo.lastChar == '_') {
+                System.out.println(munchedString);
+                munchedString = "";
+            }
             if (Character.isWhitespace(TokenInfo.lastChar)) {
                 munchedNumber += charToMunch;
             }
@@ -80,11 +85,25 @@ public class ThreeMainFunctions {
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             if (reportLexicalError(charToMunch)) {
-                if (munchedString.length() > 0) {
-                    System.out.println(munchedString);
+                if (Character.isLetter(TokenInfo.lastChar)){
+                    wrongInput = true;
+                    return munchedString;
                 }
-                if (munchedNumber.length() > 0) {
-                    System.out.println(munchedNumber);
+                if (Character.isDigit(TokenInfo.lastChar)) {
+                    wrongInput = true;
+                    char[] hasNumber = munchedString.toCharArray();
+                    boolean anyNumber = false;
+                    for (char c : hasNumber) {
+                        if (Character.isDigit(c)) {
+                            anyNumber = true;
+                        }
+                    }
+                    if (anyNumber) {
+                        return munchedString;
+                    }
+                    else {
+                        return munchedNumber;
+                    }
                 }
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);

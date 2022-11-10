@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V10.2&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
@@ -293,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668119620015</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="V10.2&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean">
+      <created>1668120738164</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1668120738164</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -345,5 +353,16 @@
     <MESSAGE value="V10.1&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean" />
     <MESSAGE value="V10.2&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean" />
     <option name="LAST_COMMIT_MESSAGE" value="V10.2&#10;-Code works&#10;-Need to figure out way to return strings to 'next' method&#10;-'reportLexicalError' now boolean" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
