@@ -30,15 +30,13 @@ public class Next {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
-
-            System.out.println(munchedWord);
-            //printer(munchedWord);
+            //Method that takes J and reader's char array and
+            printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
             stringReset();
 
             if (symbolNext) {
                 munchedWord = String.valueOf(TokenInfo.currentChar);
-                System.out.println(munchedWord);
-                //printer(munchedWord);
+                printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
                 stringReset();
             }
         }

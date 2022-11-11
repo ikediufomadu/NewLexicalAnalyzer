@@ -34,8 +34,8 @@ public class Reader {
                 next(sb.toString().toCharArray(), currentLine);
 
             }
-            if (br.readLine() == null) {
-                kind(null);
+            if (br.readLine().equals(null)) {
+                kind("null");
             }
             br.close();
             fr.close();

@@ -13,10 +13,8 @@ public class ThreeMainFunctions {
     //Get kind of lexeme
     public static String kind(String munchedWord) {
         char tFirstChar = 0;
-        //System.out.println(munchedWord + " this is checker");
-        if (!munchedWord.equals(null)){
-            tFirstChar = munchedWord.charAt(0);
-        }
+        tFirstChar = munchedWord.charAt(0);
+
         if (Character.isLetter(tFirstChar)) {
             return TokenInfo.currentKeyword = "'ID'";
         }
@@ -28,21 +26,20 @@ public class ThreeMainFunctions {
             System.out.println("Reached the end of the file.\n...\nResetting program\n\n");
             sequenceKeepRunning();
         }
-        else {
-            TokenInfo.currentKeyword = "";
-        }
-        return TokenInfo.currentKeyword;
+        return "";
     }
 
     //Get value of lexeme if it is an ID or NUM
-    public static String value(TokenInfo t) {
-//        if (kind(t).equals("'ID'")) {
-//            return TokenInfo.currentTokenValue = t.toString();
-//        }
-//        else if (kind(t).equals("'NUM'")) {
-//            //return int value, not a string
-//            return TokenInfo.currentTokenValue = t.toString();
-//        }
+    public static String value(String munchedWord) {
+        if (TokenInfo.currentKeyword.equals("'ID'")) {
+            TokenInfo.currentTokenValue = TokenInfo.currentKeyword;
+            return munchedWord;
+        }
+        else if (TokenInfo.currentKeyword.equals("'NUM'")) {
+            //return int value, not a string
+            TokenInfo.currentTokenValue = TokenInfo.currentKeyword;
+            return munchedWord;
+        }
         return "";
     }
 
