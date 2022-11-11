@@ -30,7 +30,7 @@ public class Next {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
-            //Method that takes J and reader's char array and
+            //Method that takes J and reader's char array and will return j and reset J once it reaches the end of the char array
             printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
             stringReset();
 
