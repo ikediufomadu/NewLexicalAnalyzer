@@ -8,7 +8,6 @@ import java.io.IOException;
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
 import static Components.Next.next;
-import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
