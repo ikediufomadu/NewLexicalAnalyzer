@@ -1,7 +1,5 @@
 package Components;
 
-import java.util.concurrent.atomic.AtomicStampedReference;
-
 public class TokenInfo {
     static String currentTokenValue;
     static String currentKeyword;
@@ -9,9 +7,6 @@ public class TokenInfo {
     static char nextChar;
     static char currentChar;
 
-    public TokenInfo (String tokenRead) {
-        currentKeyword = tokenRead;
-    }
     public TokenInfo (char[] charHolder, int j){
         if (j > 0) {
             lastChar = charHolder[j - 1];

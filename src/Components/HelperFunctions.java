@@ -41,9 +41,6 @@ public class HelperFunctions {
                 }
             }
         }
-        else {
-            //lostChar = "";
-        }
         munchedString = "";
         munchedNumber = "";
         munchedSymbol = "";
