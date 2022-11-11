@@ -9,6 +9,9 @@ import static Components.ThreeMainFunctions.*;
 public class HelperFunctions {
     //Report syntax errors
     public static boolean reportLexicalError(char c) {
+        if (c == '!' && TokenInfo.nextChar == '=') {
+            return false;
+        }
         return c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']';
     }
 

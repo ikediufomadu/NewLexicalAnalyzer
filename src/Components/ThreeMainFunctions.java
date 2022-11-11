@@ -53,6 +53,17 @@ public class ThreeMainFunctions {
             if (munchedNumber.length() > 0) {
                 return munchedNumber;
             }
+            if (charToMunch == '_') {
+                if (Character.isLetter(TokenInfo.nextChar)){
+                    return NOTHINGWASMUNCHED;
+                }
+                else if (reportLexicalError(charToMunch)) {
+                    return munchedString;
+                }
+                else {
+                    return munchedString;
+                }
+            }
         }
         else if (Character.isDigit(charToMunch)) {
             if (TokenInfo.lastChar == '_') {
@@ -87,7 +98,7 @@ public class ThreeMainFunctions {
         }
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             if (reportLexicalError(charToMunch)) {
-                if (Character.isLetter(TokenInfo.lastChar)){
+                if (Character.isLetter(TokenInfo.lastChar) || TokenInfo.lastChar == '_'){
                     wrongInput = true;
                     return munchedString;
                 }

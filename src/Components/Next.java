@@ -24,18 +24,27 @@ public class Next {
         //pass wordlist string to kind
         if (munchedWord != null) {
             if (wrongInput) {
+                System.out.println(munchedWord);
+                //printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
+            if (symbolNext) {
+                munchedWord = String.valueOf(TokenInfo.currentChar);
+                System.out.println(munchedWord);
+                //printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
+                stringReset();
+            }
+            if (needToSendCurrent){
+
+                newMunchedWor += munchedString;
+                newMunchedWor += maxMunch(charToMunch, currentLine, j);
+                System.out.println(newMunchedWor + " This should be sent next");
+            }
+
             //Method that takes J and reader's char array and will return j and reset J once it reaches the end of the char array
             printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
             stringReset();
-
-            if (symbolNext) {
-                munchedWord = String.valueOf(TokenInfo.currentChar);
-                printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
-                stringReset();
-            }
         }
         j++;
         while (/*!kind(munchedWord).equals("end-of-text") &&*/ j <= charHolder.length - 1) {
