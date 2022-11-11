@@ -34,9 +34,9 @@ public class Reader {
                 next(sb.toString().toCharArray(), currentLine);
 
             }
-            if (br.readLine().equals(null)) {
-                kind("null");
-            }
+//            if (br.readLine().equals(null)) {
+//                kind("null");
+//            }
             br.close();
             fr.close();
         } else {

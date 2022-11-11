@@ -13,8 +13,12 @@ public class ThreeMainFunctions {
     //Get kind of lexeme
     public static String kind(String munchedWord) {
         char tFirstChar = 0;
-        tFirstChar = munchedWord.charAt(0);
-
+        if (!munchedWord.isEmpty()) {
+            tFirstChar = munchedWord.charAt(0);
+        }
+        else {
+            return "";
+        }
         if (Character.isLetter(tFirstChar)) {
             return TokenInfo.currentKeyword = "'ID'";
         }
