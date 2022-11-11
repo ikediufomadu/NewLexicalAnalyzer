@@ -9,6 +9,7 @@ public class ThreeMainFunctions {
     static String munchedSymbol = "";
     static final String NOTHINGWASMUNCHED = null;
     static boolean wrongInput = false;
+    static boolean symbolNext = false;
     //Get kind of lexeme
     public static String kind(TokenInfo t) {
         String checker = String.valueOf(t);
@@ -34,11 +35,11 @@ public class ThreeMainFunctions {
     //Get value of lexeme if it is an ID or NUM
     public static String value(TokenInfo t) {
         if (kind(t).equals("'ID'")) {
-            return TokenInfo.currentTokenValue = String.valueOf(t);
+            return TokenInfo.currentTokenValue = t.toString();
         }
         else if (kind(t).equals("'NUM'")) {
             //return int value, not a string
-            return TokenInfo.currentTokenValue = String.valueOf(t);
+            return TokenInfo.currentTokenValue = t.toString();
         }
         return "";
     }
@@ -108,86 +109,77 @@ public class ThreeMainFunctions {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
-            //Need to fix this logic because it allows appending of symbols that shouldn't append to each other
+            //Not allowing current symbol to be sent
             if (Character.isLetter(TokenInfo.lastChar)) {
-                System.out.println(munchedString);
-                munchedString = "";
+                symbolNext = true;
+                return munchedString;
             }
             else if (Character.isDigit(TokenInfo.lastChar)) {
-                System.out.println(munchedNumber);
-                munchedNumber = "";
+                symbolNext = true;
+                return munchedNumber;
             }
             // =< logic
             if (charToMunch == '=' && TokenInfo.nextChar == '<') {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // >= logic
             if (charToMunch == '>' && TokenInfo.lastChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // != logic
             if (charToMunch == '!' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // := logic
             if (charToMunch == ':' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // < logic
             if (charToMunch == '<' && TokenInfo.lastChar != '='){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // = logic
             if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.nextChar != '<' && TokenInfo.lastChar != ':'){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // > logic
             if (charToMunch == '>' && TokenInfo.nextChar != '='){
                 munchedSymbol += charToMunch;
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
             // +, -, *, /, (, ), ;, : logic
             if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':'){
                 munchedSymbol += charToMunch;
                 if (charToMunch == ':' && TokenInfo.nextChar == '='){
                     munchedSymbol = "";
+                    return munchedSymbol;
                 }
                 if (charToMunch == '=' && TokenInfo.lastChar == ':'){
                     munchedSymbol = "";
+                    return munchedSymbol;
                 }
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
         }
         if (Character.isWhitespace(charToMunch)) {
             if (Character.isLetter(TokenInfo.lastChar) || munchedString.length() > 0) {
-                System.out.println(munchedString);
-                munchedString = "";
+                return munchedString;
             }
             if (Character.isDigit(TokenInfo.lastChar) || munchedNumber.length() > 0) {
-                System.out.println(munchedNumber);
-                munchedNumber = "";
+                return munchedNumber;
             }
             if (!Character.isLetter(TokenInfo.lastChar) && !Character.isDigit(TokenInfo.lastChar) && !Character.isWhitespace(TokenInfo.lastChar)) {
-                System.out.println(munchedSymbol);
-                munchedSymbol = "";
+                return munchedSymbol;
             }
         }
         return NOTHINGWASMUNCHED;

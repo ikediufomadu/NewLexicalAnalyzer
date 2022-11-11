@@ -10,6 +10,7 @@ public class Next {
     static int j = 0;
     static String munchedWord;
     static TokenInfo t;
+    static char grab;
     //Gets next lexeme
     public static void next(char[] charHolder, int currentLine) {
         //On chance an empty array is passed we return
@@ -31,6 +32,11 @@ public class Next {
             }
             System.out.println(munchedWord);
             t = new TokenInfo(munchedWord);
+            if (symbolNext) {
+                munchedWord = String.valueOf(TokenInfo.currentChar);
+                System.out.println(munchedWord + " SHOULD HAVE BEEN A SYMBOL!!!");
+                stringReset();
+            }
             stringReset();
         }
         j++;
