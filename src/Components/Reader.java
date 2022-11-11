@@ -35,7 +35,7 @@ public class Reader {
 
             }
             if (br.readLine() == null) {
-                kind(new TokenInfo(null));
+                kind(null);
             }
             br.close();
             fr.close();

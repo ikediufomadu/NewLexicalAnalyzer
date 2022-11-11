@@ -11,17 +11,19 @@ public class ThreeMainFunctions {
     static boolean wrongInput = false;
     static boolean symbolNext = false;
     //Get kind of lexeme
-    public static String kind(TokenInfo t) {
-        String checker = String.valueOf(t);
-        //System.out.println(checker + " this is checker");
-        char tFirstChar = checker.charAt(0);
+    public static String kind(String munchedWord) {
+        char tFirstChar = 0;
+        //System.out.println(munchedWord + " this is checker");
+        if (!munchedWord.equals(null)){
+            tFirstChar = munchedWord.charAt(0);
+        }
         if (Character.isLetter(tFirstChar)) {
             return TokenInfo.currentKeyword = "'ID'";
         }
         else if (Character.isDigit(tFirstChar)) {
             return TokenInfo.currentKeyword = "'NUM'";
         }
-        else if (t == null){
+        else if (munchedWord.equals(null)){
             TokenInfo.currentKeyword = "end-of-text";
             System.out.println("Reached the end of the file.\n...\nResetting program\n\n");
             sequenceKeepRunning();
@@ -34,13 +36,13 @@ public class ThreeMainFunctions {
 
     //Get value of lexeme if it is an ID or NUM
     public static String value(TokenInfo t) {
-        if (kind(t).equals("'ID'")) {
-            return TokenInfo.currentTokenValue = t.toString();
-        }
-        else if (kind(t).equals("'NUM'")) {
-            //return int value, not a string
-            return TokenInfo.currentTokenValue = t.toString();
-        }
+//        if (kind(t).equals("'ID'")) {
+//            return TokenInfo.currentTokenValue = t.toString();
+//        }
+//        else if (kind(t).equals("'NUM'")) {
+//            //return int value, not a string
+//            return TokenInfo.currentTokenValue = t.toString();
+//        }
         return "";
     }
 

@@ -30,20 +30,20 @@ public class Next {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
+
             System.out.println(munchedWord);
-            t = new TokenInfo(munchedWord);
             //printer(munchedWord);
             stringReset();
+
             if (symbolNext) {
                 munchedWord = String.valueOf(TokenInfo.currentChar);
-                t = new TokenInfo(munchedWord);
                 System.out.println(munchedWord);
                 //printer(munchedWord);
                 stringReset();
             }
         }
         j++;
-        while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
+        while (/*!kind(munchedWord).equals("end-of-text") &&*/ j <= charHolder.length - 1) {
             next(charHolder, currentLine);
         }
     }
