@@ -51,14 +51,11 @@ public class ThreeMainFunctions {
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
-                //System.out.println(munchedString + " FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-                munchedString += charToMunch;
                 return munchedNumber;
             }
         }
         else if (Character.isDigit(charToMunch)) {
             if (TokenInfo.lastChar == '_') {
-                System.out.println(munchedString);
                 munchedString = "";
             }
             if (Character.isWhitespace(TokenInfo.lastChar)) {
