@@ -38,7 +38,7 @@ public class Next {
             }
         }
         j++;
-        while (/*!kind(munchedWord).equals("end-of-text") &&*/ j <= charHolder.length - 1) {
+        while (TokenInfo.currentKeyword != "end-of-text" && j <= charHolder.length - 1) {
             next(charHolder, currentLine);
         }
     }
