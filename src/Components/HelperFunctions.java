@@ -12,7 +12,7 @@ public class HelperFunctions {
         if (c == '!' && TokenInfo.nextChar == '=') {
             return false;
         }
-        return c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']';
+        return c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']' || c == '{' || c == '}';
     }
 
     //Reruns program after successful tokenization of a file

@@ -8,6 +8,7 @@ import java.io.IOException;
 import static Components.Driver.main;
 import static Components.GlobalVariables.*;
 import static Components.Next.next;
+import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
@@ -31,13 +32,10 @@ public class Reader {
                     sb.append(c);
                 }
                 next(sb.toString().toCharArray(), currentLine);
-
             }
-//            if (br.readLine().equals(null)) {
-//                kind("null");
-//            }
             br.close();
             fr.close();
+            kind(null);
         } else {
             System.out.println("The file name you entered does not exist within this program's directory. Please recheck.\n");
             main(new String[0]);

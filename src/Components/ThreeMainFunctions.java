@@ -11,8 +11,13 @@ public class ThreeMainFunctions {
     static boolean wrongInput = false;
     static boolean symbolNext = false;
     //Get kind of lexeme
-    public static String kind(String munchedWord) {
-        char tFirstChar = 0;
+    public static String kind (String munchedWord) {
+        if (munchedWord == null){
+            TokenInfo.currentKeyword = "end-of-text";
+            System.out.println("Reached the end of the file.\n...\nResetting program\n\n");
+            sequenceKeepRunning();
+        }
+        char tFirstChar;
         if (!munchedWord.isEmpty()) {
             tFirstChar = munchedWord.charAt(0);
         }
@@ -24,11 +29,6 @@ public class ThreeMainFunctions {
         }
         else if (Character.isDigit(tFirstChar)) {
             return TokenInfo.currentKeyword = "'NUM'";
-        }
-        else if (munchedWord.equals(null)){
-            TokenInfo.currentKeyword = "end-of-text";
-            System.out.println("Reached the end of the file.\n...\nResetting program\n\n");
-            sequenceKeepRunning();
         }
         return "";
     }
@@ -47,7 +47,7 @@ public class ThreeMainFunctions {
         return "";
     }
 
-    public static String maxMunch(char charToMunch, int currentLine, int j) {
+    public static String maxMunch(char charToMunch, int currentLine) {
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
@@ -165,7 +165,7 @@ public class ThreeMainFunctions {
                 return munchedSymbol;
             }
             // = logic
-            if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.nextChar != '<' && TokenInfo.lastChar != ':'){
+            if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.lastChar != ':'){
                 munchedSymbol += charToMunch;
                 symbolNext = false;
                 return munchedSymbol;
@@ -179,14 +179,6 @@ public class ThreeMainFunctions {
             // +, -, *, /, (, ), ;, : logic
             if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':'){
                 munchedSymbol += charToMunch;
-                if (charToMunch == ':' && TokenInfo.nextChar == '='){
-                    munchedSymbol = "";
-                    return munchedSymbol;
-                }
-                if (charToMunch == '=' && TokenInfo.lastChar == ':'){
-                    munchedSymbol = "";
-                    return munchedSymbol;
-                }
                 symbolNext = false;
                 return munchedSymbol;
             }

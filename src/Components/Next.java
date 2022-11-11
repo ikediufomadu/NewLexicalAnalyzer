@@ -20,7 +20,7 @@ public class Next {
         //Used in the ThreeMainFunctions file to find the next char
         TokenInfo nextChar = new TokenInfo(charHolder, j);
 
-        munchedWord = maxMunch(charToMunch, currentLine, j);
+        munchedWord = maxMunch(charToMunch, currentLine);
         //pass wordlist string to kind
         if (munchedWord != null) {
             if (wrongInput) {
@@ -28,14 +28,15 @@ public class Next {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
+            //Method that takes J and reader's char array and will return j and reset J once it reaches the end of the char array
+            printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
+            stringReset();
+
             if (symbolNext) {
                 munchedWord = String.valueOf(TokenInfo.currentChar);
                 printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
                 stringReset();
             }
-            //Method that takes J and reader's char array and will return j and reset J once it reaches the end of the char array
-            printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
-            stringReset();
         }
         j++;
         while (/*!kind(munchedWord).equals("end-of-text") &&*/ j <= charHolder.length - 1) {

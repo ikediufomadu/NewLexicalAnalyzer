@@ -4,7 +4,9 @@
     <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -365,7 +367,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668147823544</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+      <created>1668150923598</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1668150923598</updated>
+    </task>
+    <task id="LOCAL-00044" summary="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+      <created>1668151458772</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1668151458772</updated>
+    </task>
+    <task id="LOCAL-00045" summary="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+      <created>1668153463197</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1668153463197</updated>
+    </task>
+    <task id="LOCAL-00046" summary="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+      <created>1668182948809</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1668182948809</updated>
+    </task>
+    <task id="LOCAL-00047" summary="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+      <created>1668184072541</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1668184072541</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -417,26 +454,5 @@
     <MESSAGE value="V11.1&#10;So close" />
     <MESSAGE value="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
     <option name="LAST_COMMIT_MESSAGE" value="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
