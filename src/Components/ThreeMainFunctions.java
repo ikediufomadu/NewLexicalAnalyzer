@@ -51,6 +51,7 @@ public class ThreeMainFunctions {
     }
 
     public static String maxMunch(char charToMunch, int currentLine) {
+        // Letter logic
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
@@ -70,6 +71,7 @@ public class ThreeMainFunctions {
                 }
             }
         }
+        // Digit logic
         else if (Character.isDigit(charToMunch)) {
             if (TokenInfo.lastChar == '_') {
                 munchedString = "";
@@ -101,6 +103,7 @@ public class ThreeMainFunctions {
                 }
             }
         }
+        // Symbol logic
         else if (!Character.isDigit(charToMunch) && !Character.isLetter(charToMunch) && !Character.isWhitespace(charToMunch)) {
             if (reportLexicalError(charToMunch)) {
                 if (Character.isLetter(TokenInfo.lastChar) || TokenInfo.lastChar == '_'){
@@ -198,6 +201,7 @@ public class ThreeMainFunctions {
                 return munchedSymbol;
             }
         }
+        // Space logic
         if (Character.isWhitespace(charToMunch)) {
             if (Character.isLetter(TokenInfo.lastChar) || munchedString.length() > 0) {
                 if (attachLostParent) {
