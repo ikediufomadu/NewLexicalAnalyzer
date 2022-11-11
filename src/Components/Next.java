@@ -32,16 +32,18 @@ public class Next {
             }
             System.out.println(munchedWord);
             t = new TokenInfo(munchedWord);
+            //printer(munchedWord);
+            stringReset();
             if (symbolNext) {
                 munchedWord = String.valueOf(TokenInfo.currentChar);
-                System.out.println(munchedWord + " SHOULD HAVE BEEN A SYMBOL!!!");
+                t = new TokenInfo(munchedWord);
+                System.out.println(munchedWord);
+                //printer(munchedWord);
                 stringReset();
             }
-            stringReset();
         }
         j++;
         while (!kind(t).equals("end-of-text") && j <= charHolder.length - 1) {
-            //printer(kind(t));
             next(charHolder, currentLine);
         }
     }

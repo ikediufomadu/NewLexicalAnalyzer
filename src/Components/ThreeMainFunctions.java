@@ -122,39 +122,46 @@ public class ThreeMainFunctions {
             if (charToMunch == '=' && TokenInfo.nextChar == '<') {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // >= logic
             if (charToMunch == '>' && TokenInfo.lastChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // != logic
             if (charToMunch == '!' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // := logic
             if (charToMunch == ':' && TokenInfo.nextChar == '='){
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // < logic
             if (charToMunch == '<' && TokenInfo.lastChar != '='){
                 munchedSymbol += charToMunch;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // = logic
             if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.nextChar != '<' && TokenInfo.lastChar != ':'){
                 munchedSymbol += charToMunch;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // > logic
             if (charToMunch == '>' && TokenInfo.nextChar != '='){
                 munchedSymbol += charToMunch;
+                symbolNext = false;
                 return munchedSymbol;
             }
             // +, -, *, /, (, ), ;, : logic
@@ -168,6 +175,7 @@ public class ThreeMainFunctions {
                     munchedSymbol = "";
                     return munchedSymbol;
                 }
+                symbolNext = false;
                 return munchedSymbol;
             }
         }

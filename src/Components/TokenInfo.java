@@ -23,7 +23,6 @@ public class TokenInfo {
     }
     @Override
     public String toString() {
-        String s = String.valueOf(nextChar);
-        return s;
+        return String.valueOf(nextChar);
     }
 }
