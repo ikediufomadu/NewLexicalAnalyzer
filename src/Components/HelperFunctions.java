@@ -7,6 +7,7 @@ import static Components.GlobalVariables.*;
 import static Components.ThreeMainFunctions.*;
 
 public class HelperFunctions {
+    static String lostChar = "";
     //Report syntax errors
     public static boolean reportLexicalError(char c) {
         if (c == '!' && TokenInfo.nextChar == '=') {
@@ -30,8 +31,19 @@ public class HelperFunctions {
     private static void reset() {
         currentLine = 0;
         currentCharInLine = 0;
+        Next.j = 0;
     }
     public static void stringReset(){
+        if (munchedString.length() == 1) {
+            if (Character.isLetter(TokenInfo.currentChar)){
+                if (Character.isLetter(TokenInfo.nextChar)) {
+                    lostChar = String.valueOf(TokenInfo.currentChar);
+                }
+            }
+        }
+        else {
+            //lostChar = "";
+        }
         munchedString = "";
         munchedNumber = "";
         munchedSymbol = "";

@@ -10,6 +10,8 @@ public class ThreeMainFunctions {
     static final String NOTHINGWASMUNCHED = null;
     static boolean wrongInput = false;
     static boolean symbolNext = false;
+    static boolean attachLostParent = false;
+
     //Get kind of lexeme
     public static String kind (String munchedWord) {
         if (munchedWord == null){
@@ -18,6 +20,7 @@ public class ThreeMainFunctions {
             sequenceKeepRunning();
         }
         char tFirstChar;
+        assert munchedWord != null;
         if (!munchedWord.isEmpty()) {
             tFirstChar = munchedWord.charAt(0);
         }
@@ -51,6 +54,8 @@ public class ThreeMainFunctions {
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
+                attachLostParent = true;
+                lostChar = munchedString;
                 return munchedNumber;
             }
             if (charToMunch == '_') {
@@ -121,13 +126,15 @@ public class ThreeMainFunctions {
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
-            //Not allowing current symbol to be sent
+            //Allows for symbols that came after a letter to be sent
             if (Character.isLetter(TokenInfo.lastChar)) {
                 symbolNext = true;
+                attachLostParent = false;
                 return munchedString;
             }
             else if (Character.isDigit(TokenInfo.lastChar)) {
                 symbolNext = true;
+                attachLostParent = false;
                 return munchedNumber;
             }
             // =< logic
@@ -135,6 +142,7 @@ public class ThreeMainFunctions {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // >= logic
@@ -142,6 +150,7 @@ public class ThreeMainFunctions {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // != logic
@@ -149,6 +158,7 @@ public class ThreeMainFunctions {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // := logic
@@ -156,35 +166,45 @@ public class ThreeMainFunctions {
                 munchedSymbol += charToMunch;
                 munchedSymbol += TokenInfo.nextChar;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // < logic
             if (charToMunch == '<' && TokenInfo.lastChar != '='){
                 munchedSymbol += charToMunch;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // = logic
             if (charToMunch == '=' && TokenInfo.lastChar != '>' && TokenInfo.lastChar != '!' && TokenInfo.lastChar != ':'){
                 munchedSymbol += charToMunch;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // > logic
             if (charToMunch == '>' && TokenInfo.nextChar != '='){
                 munchedSymbol += charToMunch;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
             // +, -, *, /, (, ), ;, : logic
             if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':'){
                 munchedSymbol += charToMunch;
                 symbolNext = false;
+                attachLostParent = false;
                 return munchedSymbol;
             }
         }
         if (Character.isWhitespace(charToMunch)) {
             if (Character.isLetter(TokenInfo.lastChar) || munchedString.length() > 0) {
+                if (attachLostParent) {
+                    lostChar += munchedString;
+                    attachLostParent = false;
+                    return lostChar;
+                }
                 return munchedString;
             }
             if (Character.isDigit(TokenInfo.lastChar) || munchedNumber.length() > 0) {

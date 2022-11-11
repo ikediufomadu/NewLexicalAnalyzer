@@ -1,8 +1,7 @@
 package Components;
 
 import static Components.GlobalVariables.currentCharInLine;
-import static Components.HelperFunctions.position;
-import static Components.HelperFunctions.stringReset;
+import static Components.HelperFunctions.*;
 import static Components.Printer.printer;
 import static Components.ThreeMainFunctions.*;
 
@@ -21,20 +20,20 @@ public class Next {
         TokenInfo nextChar = new TokenInfo(charHolder, j);
 
         munchedWord = maxMunch(charToMunch, currentLine);
-        //pass wordlist string to kind
         if (munchedWord != null) {
+            //Prints characters attached and before an unaccepted symbol
             if (wrongInput) {
-                printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
+                printer(currentLine, munchedWord, kind(munchedWord), value(munchedWord));
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }
             //Method that takes J and reader's char array and will return j and reset J once it reaches the end of the char array
-            printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
+            printer(currentLine, munchedWord, kind(munchedWord), value(munchedWord));
             stringReset();
 
             if (symbolNext) {
                 munchedWord = String.valueOf(TokenInfo.currentChar);
-                printer(position(currentLine, currentCharInLine), munchedWord, kind(munchedWord), value(munchedWord));
+                printer(currentLine, munchedWord, kind(munchedWord), value(munchedWord));
                 stringReset();
             }
         }
