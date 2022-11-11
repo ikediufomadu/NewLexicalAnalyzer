@@ -24,7 +24,6 @@ public class Next {
         //pass wordlist string to kind
         if (munchedWord != null) {
             if (wrongInput) {
-                System.out.println(munchedWord);
                 System.out.println("\nIllegal character at " + position(currentLine, currentCharInLine) + ". Character is '" + charToMunch + "'.\nExiting program...");
                 System.exit(0);
             }

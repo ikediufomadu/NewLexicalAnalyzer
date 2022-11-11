@@ -14,7 +14,6 @@ public class ThreeMainFunctions {
     public static String kind(String munchedWord) {
         char tFirstChar = 0;
         if (!munchedWord.isEmpty()) {
-            System.out.println(munchedWord + " THIS IS PASSED TO NEXT");
             tFirstChar = munchedWord.charAt(0);
         }
         else {
