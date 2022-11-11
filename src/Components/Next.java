@@ -9,8 +9,6 @@ import static Components.ThreeMainFunctions.*;
 public class Next {
     static int j = 0;
     static String munchedWord;
-    static TokenInfo t;
-    static char grab;
     //Gets next lexeme
     public static void next(char[] charHolder, int currentLine) {
         //On chance an empty array is passed we return

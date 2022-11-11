@@ -14,6 +14,7 @@ public class ThreeMainFunctions {
     public static String kind(String munchedWord) {
         char tFirstChar = 0;
         if (!munchedWord.isEmpty()) {
+            System.out.println(munchedWord + " THIS IS PASSED TO NEXT");
             tFirstChar = munchedWord.charAt(0);
         }
         else {
@@ -51,8 +52,9 @@ public class ThreeMainFunctions {
         if (Character.isLetter(charToMunch) || charToMunch == '_') {
             munchedString += charToMunch;
             if (munchedNumber.length() > 0) {
-                System.out.println(munchedNumber);
-                munchedNumber = "";
+                //System.out.println(munchedString + " FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+                munchedString += charToMunch;
+                return munchedNumber;
             }
         }
         else if (Character.isDigit(charToMunch)) {
