@@ -31,6 +31,8 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
+                //In case there is a comment at the end of the file this will allow it to be skipped without throughing an arrayoutofbounds error
+                sb.append(" ");
                 next(sb.toString().toCharArray(), currentLine);
             }
             br.close();

@@ -1,11 +1,10 @@
-program bad_expression:
-   int a;
-   int b;
-   if4 a < b then5
-     2int b;
-     b := 2 * a
-   5else
-     bool b;
-     b := 2 * a
-   fii
-end
+a_123gmail.comSomething
+
+18/10/year2020
+
+( expression)	=1345integer followed by 25or 50
+
+a_123gmail.com
+1g
+123gmail
+//keep entering logic for symbol(s)

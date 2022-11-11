@@ -191,7 +191,7 @@ public class ThreeMainFunctions {
                 return munchedSymbol;
             }
             // +, -, *, /, (, ), ;, : logic
-            if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':'){
+            if (charToMunch == '+' || charToMunch == '-' || charToMunch == '*' || charToMunch == '/' || charToMunch == '(' || charToMunch == ')' || charToMunch == ';' || charToMunch == ':') {
                 munchedSymbol += charToMunch;
                 symbolNext = false;
                 attachLostParent = false;
