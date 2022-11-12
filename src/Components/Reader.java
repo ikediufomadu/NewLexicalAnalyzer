@@ -11,14 +11,16 @@ import static Components.Next.next;
 import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
+    public static StringBuilder sb = new StringBuilder();
+
     public static void reader(String filenameToRead) throws IOException {
-        File f = new File("Test Cases/" + filenameToRead);
+        File f = new File("./Test Cases/" + filenameToRead);
 
         if (f.exists() && !f.isDirectory() && f.isFile() && f.canRead()) {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
             String checker;
-            StringBuilder sb = new StringBuilder();
+            sb = new StringBuilder();
 
             //Reads by line
             while ((checker = br.readLine()) != null) {
@@ -31,12 +33,13 @@ public class Reader {
                     if (i + 1 < checker.length() && c == '/' && checker.charAt(i + 1) == '/') break;
                     sb.append(c);
                 }
-                //In case there is a comment at the end of the file this will allow it to be skipped without throughing an arrayoutofbounds error
+                //In case there is a comment at the end of the file this will allow it to be skipped without throwing an array out of bounds error
                 sb.append(" ");
-                next(sb.toString().toCharArray());
+                next();
             }
             br.close();
             fr.close();
+
             kind(null);
         } else {
             System.out.println("The file name you entered does not exist within this program's directory. Please recheck.\n");

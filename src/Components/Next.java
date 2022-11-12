@@ -1,24 +1,27 @@
 package Components;
 
+import java.io.IOException;
+
 import static Components.GlobalVariables.currentCharInLine;
 import static Components.GlobalVariables.currentLine;
 import static Components.HelperFunctions.*;
 import static Components.Printer.printer;
+import static Components.Reader.sb;
 import static Components.ThreeMainFunctions.*;
 
 public class Next {
     static int j = 0;
-    static String munchedWord;
+    public static String munchedWord = "";
     //Gets next lexeme
-    public static void next(char[] charHolder) {
+    public static void next() throws IOException {
         //On chance an empty array is passed we return
-        if (charHolder.length == 0) {
+        if (stringToChar(sb).length == 0) {
             return;
         }
-        char charToMunch = charHolder[j];
+        char charToMunch = stringToChar(sb)[j];
 
         //Used in the ThreeMainFunctions file to find the next char
-        TokenInfo nextChar = new TokenInfo(charHolder, j);
+        TokenInfo nextChar = new TokenInfo(stringToChar(sb), j);
 
         munchedWord = maxMunch(charToMunch, currentLine);
         if (munchedWord != null) {
@@ -39,8 +42,8 @@ public class Next {
             }
         }
         j++;
-        while (TokenInfo.currentKeyword != "end-of-text" && j <= charHolder.length - 1) {
-            next(charHolder);
+        while (!TokenInfo.currentKeyword.equals("end-of-text")  && j <= stringToChar(sb).length - 1) {
+            next();
         }
     }
 }

@@ -48,4 +48,7 @@ public class HelperFunctions {
     public static String position(int currentLine, int currentCharInLine) {
         return (currentLine) + ":" + (currentCharInLine);
     }
+    public static char[] stringToChar (StringBuilder sb) {
+        return sb.toString().toCharArray();
+    }
 }
