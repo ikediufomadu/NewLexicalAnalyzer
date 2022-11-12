@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V13&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append.">
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GlobalVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ThreeMainFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,34 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667248017978</updated>
-    </task>
-    <task id="LOCAL-00001" summary="V1.0&#10;-Main classes created&#10;-Working on 'Next' function">
-      <created>1667252029104</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1667252029105</updated>
-    </task>
-    <task id="LOCAL-00002" summary="V1.1&#10;-Printer class created&#10;-Working on 'Next' function">
-      <created>1667253573143</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1667253573143</updated>
-    </task>
-    <task id="LOCAL-00003" summary="V1.2&#10;-Next function has base case recursion implemented.">
-      <created>1667295738030</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1667295738030</updated>
-    </task>
-    <task id="LOCAL-00004" summary="V1.2&#10;-Next function has base case recursion implemented.&#10;-Kind function needs to be revamped">
-      <created>1667337976107</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1667337976107</updated>
     </task>
     <task id="LOCAL-00005" summary="V1.3&#10;-Class formally known as 'TwoMainFunctions' changed to 'ThreeMainFunctions'&#10;-Next function working, need to take care of out of bounds error&#10;-Added maxMunch function in 'ThreeMainFunctions'">
       <created>1667775781740</created>
@@ -410,7 +377,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668185360093</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
+      <created>1668193209407</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1668193209407</updated>
+    </task>
+    <task id="LOCAL-00050" summary="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
+      <created>1668193315042</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1668193315043</updated>
+    </task>
+    <task id="LOCAL-00051" summary="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
+      <created>1668195566034</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1668195566034</updated>
+    </task>
+    <task id="LOCAL-00052" summary="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
+      <created>1668196444182</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1668196444182</updated>
+    </task>
+    <task id="LOCAL-00053" summary="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop">
+      <created>1668197922612</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1668197922612</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -436,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="V1.4&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true" />
     <MESSAGE value="V1.5&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
@@ -461,15 +462,16 @@
     <MESSAGE value="V11.1&#10;So close" />
     <MESSAGE value="V12&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
     <MESSAGE value="V13&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
-    <option name="LAST_COMMIT_MESSAGE" value="V13&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
+    <MESSAGE value="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Components/ThreeMainFunctions.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="17" />
+          <line>54</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,7 +12,7 @@ import static Components.ThreeMainFunctions.kind;
 
 public class Reader {
     public static void reader(String filenameToRead) throws IOException {
-        File f = new File(filenameToRead);
+        File f = new File("Test Cases/" + filenameToRead);
 
         if (f.exists() && !f.isDirectory() && f.isFile() && f.canRead()) {
             FileReader fr = new FileReader(f);
