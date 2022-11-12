@@ -1,6 +1,7 @@
 package Components;
 
 import static Components.GlobalVariables.currentCharInLine;
+import static Components.GlobalVariables.currentLine;
 import static Components.HelperFunctions.*;
 import static Components.Printer.printer;
 import static Components.ThreeMainFunctions.*;
@@ -9,7 +10,7 @@ public class Next {
     static int j = 0;
     static String munchedWord;
     //Gets next lexeme
-    public static void next(char[] charHolder, int currentLine) {
+    public static void next(char[] charHolder) {
         //On chance an empty array is passed we return
         if (charHolder.length == 0) {
             return;
@@ -39,7 +40,7 @@ public class Next {
         }
         j++;
         while (TokenInfo.currentKeyword != "end-of-text" && j <= charHolder.length - 1) {
-            next(charHolder, currentLine);
+            next(charHolder);
         }
     }
 }
