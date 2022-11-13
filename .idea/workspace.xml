@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="V14&#10;WORKS&#10;-'Next' done&#10;-Position 2nd parameter to be addressed&#10;-Logic for lostChar to be addressed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="Micro Changes&#10;-Next no longer requires char array passed to it" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667248017978</updated>
-    </task>
-    <task id="LOCAL-00007" summary="V1.4&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true">
-      <created>1667777349127</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1667777349127</updated>
     </task>
     <task id="LOCAL-00008" summary="V1.4&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true">
       <created>1667778264073</created>
@@ -416,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668217754448</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Micro Changes&#10;-Next no longer requires char array passed to it">
+      <created>1668265301948</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1668265301948</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -442,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value" />
     <MESSAGE value="V2&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this&#10;-End of file is now classified as a null stringbuilder value&#10;-Added new test cases and expected output text files" />
     <MESSAGE value="V4&#10;-Code outputs&#10;-Next function working&#10;--Will not address final line of files if it is only one word due to condition put in place to stop repeating values.&#10;-maxMunch almost fixed&#10;--Output gets messy when a number character follows a letter character in a string&#10;---Ex 'ab1b', 'ab11', 'ab11b' &#10;----Possibly due to current logic within maxMunch&#10;-Kind function needs to recognize a null value as EOF" />
@@ -467,6 +461,7 @@
     <MESSAGE value="V13&#10;Everything works. When a digit comes before a letter, the first letter following the digit will not append." />
     <MESSAGE value="V14&#10;WORKS&#10;-Minor changes needed to position and 'next' loop" />
     <MESSAGE value="V14&#10;WORKS&#10;-'Next' done&#10;-Position 2nd parameter to be addressed&#10;-Logic for lostChar to be addressed" />
-    <option name="LAST_COMMIT_MESSAGE" value="V14&#10;WORKS&#10;-'Next' done&#10;-Position 2nd parameter to be addressed&#10;-Logic for lostChar to be addressed" />
+    <MESSAGE value="Micro Changes&#10;-Next no longer requires char array passed to it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Micro Changes&#10;-Next no longer requires char array passed to it" />
   </component>
 </project>
