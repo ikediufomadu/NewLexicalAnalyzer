@@ -3,10 +3,11 @@ package Components;
 import java.io.IOException;
 
 import static Components.Driver.main;
-import static Components.GlobalVariables.*;
 import static Components.ThreeMainFunctions.*;
 
 public class HelperFunctions {
+    static int currentLine = 0;
+    static int currentCharInLine = 0;
     static String lostChar = "";
     //Report syntax errors
     public static boolean reportLexicalError(char c) {

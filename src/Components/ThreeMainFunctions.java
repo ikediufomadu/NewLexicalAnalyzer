@@ -1,6 +1,5 @@
 package Components;
 
-import static Components.GlobalVariables.*;
 import static Components.HelperFunctions.*;
 
 public class ThreeMainFunctions {

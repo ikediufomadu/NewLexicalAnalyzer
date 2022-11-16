@@ -2,8 +2,8 @@ package Components;
 
 import java.io.IOException;
 
-import static Components.GlobalVariables.currentCharInLine;
-import static Components.GlobalVariables.currentLine;
+import static Components.HelperFunctions.currentCharInLine;
+import static Components.HelperFunctions.currentLine;
 import static Components.HelperFunctions.*;
 import static Components.Reader.sb;
 import static Components.ThreeMainFunctions.*;

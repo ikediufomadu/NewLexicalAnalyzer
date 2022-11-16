@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static Components.Driver.main;
-import static Components.GlobalVariables.*;
+import static Components.HelperFunctions.*;
 import static Components.Next.next;
 import static Components.ThreeMainFunctions.kind;
 
