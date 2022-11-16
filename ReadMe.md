@@ -4,7 +4,7 @@
 ### Javac 17.0.2
 ### IntelliJ IDEA 2021.3.3 (Community Edition)
 
-# Compile and run via IDE
+# Compile and run through the 'Driver.java' file
 
 ## Program Usage
 * User is prompted to enter file or quit

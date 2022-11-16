@@ -5,7 +5,6 @@ import java.io.IOException;
 import static Components.GlobalVariables.currentCharInLine;
 import static Components.GlobalVariables.currentLine;
 import static Components.HelperFunctions.*;
-import static Components.Printer.printer;
 import static Components.Reader.sb;
 import static Components.ThreeMainFunctions.*;
 

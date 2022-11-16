@@ -13,7 +13,7 @@ public class HelperFunctions {
         if (c == '!' && TokenInfo.nextChar == '=') {
             return false;
         }
-        return c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']' || c == '{' || c == '}';
+        return c == '@' || c == '!' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '`' || c == '~' || c == ',' || c == '\"' || c == '?' || c == '\'' || c == '[' || c == ']' || c == '{' || c == '}' || c == '.';
     }
 
     //Reruns program after successful tokenization of a file
@@ -50,5 +50,22 @@ public class HelperFunctions {
     }
     public static char[] stringToChar (StringBuilder sb) {
         return sb.toString().toCharArray();
+    }
+    public static void printer(int  currentLine, String munchedWord, String kindValue, String value) {
+        int intPassed = 1;
+
+        for (int i = 1; i < munchedWord.length(); i++) {
+            if (i == munchedWord.length() - 1) {
+                intPassed = i;
+            }
+        }
+        if (!munchedWord.equals("") && !munchedWord.equals(" ") && !munchedWord.contains("\t")) {
+            if (!kindValue.equals("'ID'") && !kindValue.equals("'NUM'")){
+                System.out.println(position(currentLine, intPassed) + " " + "'" + munchedWord + "'");
+            }
+            else {
+                System.out.println(position(currentLine, intPassed) + " " + kindValue + " " + value);
+            }
+        }
     }
 }

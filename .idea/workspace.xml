@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="Micro Changes&#10;-Next no longer requires char array passed to it" />
+    <list default="true" id="e0c64d9d-e015-4a11-9406-89693aa7efc6" name="Changes" comment="Micro Changes&#10;-Next no longer requires char array passed to it">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/ab.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HelperFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Next.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Next.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Printer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Reader.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Classes\COSC 455\Projects\IkediUfomadu_Project1 (feedback)\Test Cases" />
       <recent name="E:\Classes\COSC 455\Projects\IkediUfomadu_Project1 (feedback)" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -67,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667248017978</updated>
-    </task>
-    <task id="LOCAL-00008" summary="V1.4&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;-Need to tweak maxMunch function to append after certain conditions become true">
-      <created>1667778264073</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1667778264073</updated>
     </task>
     <task id="LOCAL-00009" summary="V1.5&#10;-PNG of the next and maxMunch logic worked out&#10;-Next function working&#10;--Need to fix repetitive chars due to weak arrayOutOfBounds manager in the base case.&#10;-Need to tweak maxMunch function to append after certain conditions become true&#10;--Working on this">
       <created>1667785935293</created>
@@ -411,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668265301948</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Micro Changes&#10;-Next no longer requires char array passed to it">
+      <created>1668305396879</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1668305396879</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

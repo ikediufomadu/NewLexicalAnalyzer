@@ -14,6 +14,10 @@ public class Reader {
     public static StringBuilder sb = new StringBuilder();
 
     public static void reader(String filenameToRead) throws IOException {
+        /*
+             File path is hardcoded. If you want to use this program without having a Test Cases folder
+             remove "./Test Cases/" and make sure the file is inside the src folder, and not in the Components folder.
+        */
         File f = new File("./Test Cases/" + filenameToRead);
 
         if (f.exists() && !f.isDirectory() && f.isFile() && f.canRead()) {
